@@ -253,7 +253,13 @@
 
 			<button style="main_button">
 				<placement x="%center_x%" y="%row19_y%"/>
-				<text>{@reboot_btn=Powermenu}</text>
+				<text>{@reboot_btn=Powermen&#220;}</text>
+				<action function="page">reboot</action>
+			</button>
+
+			<button style="main_button">
+				<placement x="%center_x%" y="%row19_y_about%"/>
+				<text>{@about_btn=About}</text>
 				<action function="page">reboot</action>
 			</button>
 		</page>
@@ -2908,14 +2914,6 @@
 			<listbox style="advanced_listbox">
 				<placement x="%indent%" y="%row2a_y%" w="%content_width%" h="%listbox_advanced_height%"/>
 
-				<listitem name="{@rb_system_btn=System}">
-					<condition var1="tw_reboot_system" var2="1"/>
-					<actions>
-						<action function="set">tw_back=reboot</action>
-						<action function="page">reboot_system_routine</action>
-					</actions>
-				</listitem>
-
 				<listitem name="{@rb_poweroff_btn=Power Off}">
 					<condition var1="tw_reboot_poweroff" var2="1"/>
 					<actions>
@@ -2930,6 +2928,14 @@
 						<action function="set">tw_complete_text1={@turning_off=Turning Off...}</action>
 						<action function="set">tw_slider_text={@swipe_power_off=Swipe to Power Off}</action>
 						<action function="page">rebootcheck</action>
+					</actions>
+				</listitem>
+        
+				<listitem name="{@rb_system_btn=System}">
+					<condition var1="tw_reboot_system" var2="1"/>
+					<actions>
+						<action function="set">tw_back=reboot</action>
+						<action function="page">reboot_system_routine</action>
 					</actions>
 				</listitem>
 
@@ -4166,12 +4172,14 @@
 				<image resource="unlock_icon"/>
 				<placement x="%center_x%" y="%row10_y%" placement="4"/>
 			</image>
-
-			<slider>
-				<text>{@swipe_to_unlock}</text>
+      
+      <button>
+				<placement x="%center_x%" y="%row10_y%" placement="4"/>
+				<image resource="unlock_icon"/>
+        <text>{@swipe_to_unlock}</text>
 				<action function="overlay"/>
-			</slider>
-
+			</button>
+      
 			<action>
 				<touch key="power"/>
 				<action function="togglebacklight"/>

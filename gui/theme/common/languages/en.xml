@@ -59,7 +59,8 @@
 		<string name="mount_btn">Mount</string>
 		<string name="settings_btn">Settings</string>
 		<string name="advanced_btn">Advanced</string>
-		<string name="reboot_btn">Powermenu</string>
+		<string name="reboot_btn">Powermen&#252;</string>
+    <string name="about_btn">About</string>
 		<string name="files_btn">Files</string>
 		<string name="copy_log_btn">Copy Log</string>
 		<string name="select_type_hdr">Select Type</string>
@@ -296,8 +297,8 @@
 		<string name="rb_download_btn">Reboot to Downloadmode</string>
 		<string name="rb_edl_btn">Reboot to EDL Mode</string>
 		<string name="turning_off">Turning Off...</string>
-		<string name="swipe_power_off">Swipe to Power Off</string>
-		<string name="swipe_power_off_s">Power Off</string>
+		<string name="swipe_power_off">Swipe to Power Off Phone</string>
+		<string name="swipe_power_off_s">Power Off Phone</string>
 		<string name="sys_ro_hdr">Unmodified System Partition</string>
 		<string name="sys_ro_keep">Keep System Read only?</string>
 		<string name="sys_rop1">EKRP can leave your system partition unmodified</string>
@@ -491,7 +492,7 @@
 		<string name="swipe_fix_contexts">   Fix Contexts</string>
 		<string name="fixing_contexts">Fixing Contexts...</string>
 		<string name="fix_contexts_complete">Fix Contexts Complete</string>
-		<string name="reboot_hdr">Reboot</string>
+		<string name="reboot_hdr">Powermen&#252;</string>
 		<string name="install_cancel">Do Not Install</string>
 		<string name="sel_storage_list">Select Storage</string>
 		<string name="ok_btn">OK</string>
