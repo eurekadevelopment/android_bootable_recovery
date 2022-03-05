@@ -2,9 +2,9 @@
 <recovery>
 	<details>
 		<resolution width="1080" height="1920"/>
-		<author>TeamWin</author>
-		<title>Backup Naowz</title>
-		<description>Default basic theme</description>
+		<author>EurekaTeam</author>
+		<title>EKRP</title>
+		<description>Eurke Team RP</description>
 		<preview>preview.png</preview>
 		<themeversion>{themeversion}</themeversion>
 	</details>
@@ -14,16 +14,18 @@
 	</include>
 
 	<resources>
-		<font name="font_l" filename="RobotoCondensed-Regular.ttf" size="54"/>
-		<font name="font_m" filename="RobotoCondensed-Regular.ttf" size="42"/>
-		<font name="font_s" filename="RobotoCondensed-Regular.ttf" size="36"/>
-		<font name="fixed" filename="DroidSansMono.ttf" size="30"/>
+		<font name="font_l" filename="SamsungSharpSans-Bold.ttf" size="48"/>
+		<font name="font_m" filename="SamsungSharpSans-Bold.ttf" size="36"/>
+		<font name="font_s" filename="SamsungSharpSans-Bold.ttf" size="30"/>
+		<font name="fixed" filename="SamsungSharpSans-Bold.ttf" size="24"/>
 
-		<font name="keylabel" filename="RobotoCondensed-Regular.ttf" size="64"/>
-		<font name="keylabel-small" filename="RobotoCondensed-Regular.ttf" size="46"/>
-		<font name="keylabel-longpress" filename="RobotoCondensed-Regular.ttf" size="32"/>
+		<font name="keylabel" filename="SamsungSharpSans-Bold.ttf" size="54"/>
+		<font name="keylabel-small" filename="SamsungSharpSans-Bold.ttf" size="42"/>
+		<font name="keylabel-longpress" filename="SamsungSharpSans-Bold.ttf" size="26"/>
 
 		<image name="logo" filename="logo" retainaspect="1"/>
+    <image name="temp" filename="temp" retainaspect="1"/>
+    <image name="batt" filename="batt" retainaspect="1"/>
 		<image name="main_button" filename="main_button"/>
 		<image name="main_button_half_height" filename="main_button_half_height"/>
 		<image name="main_button_half_height_full_width" filename="main_button_half_height_full_width"/>
@@ -58,7 +60,6 @@
 		<image name="tab_display" filename="tab_display" retainaspect="1"/>
 		<image name="tab_vibration" filename="tab_vibration" retainaspect="1"/>
 		<image name="tab_language" filename="tab_language" retainaspect="1"/>
-
 		<image name="backspace" filename="backspace" retainaspect="1"/>
 		<image name="enter" filename="enter" retainaspect="1"/>
 		<image name="shift" filename="shift" retainaspect="1"/>
@@ -84,10 +85,13 @@
 		<variable name="dialog_height" value="704"/>
 		<variable name="back_button_x" value="240"/>
 		<variable name="console_button_x" value="840"/>
-		<variable name="indent" value="36"/>
+		<variable name="indent" value="42"/>
 		<variable name="col1_x_left" value="72"/>
-		<variable name="col1_x_header" value="184"/>
+		<variable name="col1_x_header" value="190"/>
+    <variable name="col1_x_header_cpu" value="140"/>
+    <variable name="col1_x_header_batt" value="880"/>
 		<variable name="center_x" value="540"/>
+		<variable name="center_x_clock" value="280"/>
 		<variable name="col1_x_right" value="576"/>
 		<variable name="indent_right" value="1044"/>
 		<variable name="tab_height" value="96"/>
@@ -113,9 +117,13 @@
 		<variable name="btn4_col2_x" value="297"/>
 		<variable name="btn4_col3_x" value="558"/>
 		<variable name="btn4_col4_x" value="819"/>
-		<variable name="row1_header_y" value="4"/>
+		<variable name="row1_header_y" value="8"/>
+		<variable name="row1_header_y_clock" value="8"/>
+		<variable name="row1_header_y_cpu" value="8"/>
+		<variable name="row1_header_y_batt" value="12"/>
 		<variable name="row2_header_y" value="72"/>
 		<variable name="row3_header_y" value="90"/>
+		<variable name="row35_header_y" value="136"/>
 		<variable name="row4_header_y" value="168"/>
 		<variable name="row1_y" value="256"/>
 		<variable name="row1a_y" value="288"/>
@@ -174,8 +182,8 @@
 		<variable name="navbar_btn_y" value="1856"/>
 		<variable name="keyboard_y" value="1149"/>
 		<variable name="keyboard_terminal_y" value="1053"/>
-		<variable name="background_color" value="#1A1A1A"/>
-		<variable name="accent_color" value="#0090CA"/>
+		<variable name="background_color" value="#000000"/>
+		<variable name="accent_color" value="#000000"/>
 		<variable name="accent_color_semitransparent" value="#0090CA30"/>
 		<variable name="text_color" value="#EEEEEE"/>
 		<variable name="text_button_color" value="#EEEEEE"/>
@@ -188,8 +196,10 @@
 		<variable name="warning" value="#F8F8A0"/>
 		<variable name="error" value="#FF0101"/>
 		<variable name="highlight" value="#0090CA"/>
-		<variable name="fileselector_linecolor" value="#555555"/>
-		<variable name="fileselector_highlight_color" value="#555555"/>
+    <variable name="highlight_color2" value="#0088ff"/>
+		<variable name="fileselector_linecolor" value="#EEEEEE"/>
+    <variable name="fileselector_seperator" value="#0088ff"/>
+		<variable name="fileselector_highlight_color" value="#00000000"/>
 		<variable name="fileselector_separatorheight" value="2"/>
 		<variable name="fileselector_spacing" value="0"/>
 		<variable name="fileselector_install_height" value="1152"/>
@@ -208,6 +218,7 @@
 		<variable name="fastscroll_linew" value="2"/>
 		<variable name="fastscroll_rectw" value="24"/>
 		<variable name="fastscroll_recth" value="108"/>
+    <variable name="fastscroll_color" value="#0088ff"/>
 		<variable name="slidervalue_lineh" value="3"/>
 		<variable name="slidervalue_padding" value="0"/>
 		<variable name="slidervalue_sliderw" value="72"/>
@@ -268,17 +279,20 @@
 				<placement x="%indent%" y="%row1_header_y%"/>
 				<text>%tw_version%</text>
 			</text>
-
+      <image>
+				<image resource="temp"/>
+				<placement x="%col1_x_header_cpu%" y="%row1_header_y_cpu%"/>
+			</image>
 			<text color="%text_color%">
 				<condition var1="tw_no_cpu_temp" var2="0"/>
 				<font resource="font_m"/>
 				<placement x="%indent%" y="%row1_header_y%"/>
-				<text>{@cpu_temp=CPU: %tw_cpu_temp% °C}</text>
+				<text>{@cpu_temp= %tw_cpu_temp% °C}</text>
 			</text>
 
 			<text color="%text_color%">
 				<font resource="font_m"/>
-				<placement x="%center_x%" y="%row1_header_y%" placement="5"/>
+				<placement x="%center_x_clock%" y="%row1_header_y_clock%" placement="5"/>
 				<text>%tw_time%</text>
 			</text>
 
@@ -290,9 +304,12 @@
 				</conditions>
 				<font resource="font_m"/>
 				<placement x="%indent_right%" y="%row1_header_y%" placement="1"/>
-				<text>{@battery_pct=Battery: %tw_battery%}</text>
+				<text>%tw_battery%</text>
 			</text>
-
+      <image>
+				<image resource="batt"/>
+				<placement x="%col1_x_header_batt%" y="%row1_header_y_batt%"/>
+			</image>
 			<fill color="#000000">
 				<condition var1="tw_busy" var2="0"/>
 				<placement x="0" y="%navbar_y%" w="%screen_width%" h="%navbar_height%"/>
@@ -566,7 +583,7 @@
 				<condition var1="tw_hide_kb" var2="0"/>
 				<placement x="0" y="%keyboard_terminal_y%" w="%screen_width%" h="96"/>
 				<keymargin x="0" y="0"/>
-				<background color="#111111"/>
+				<background color="#000000"/>
 				<key-alphanumeric color="#111111" font="keylabel" textcolor="#EEEEEE"/>
 				<key-other color="#111111" font="keylabel-small" textcolor="#5b5b5bff"/>
 				<longpress font="keylabel-longpress" textcolor="#5b5b5bff" x="12" y="0"/>

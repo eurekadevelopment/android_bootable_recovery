@@ -2,24 +2,24 @@
 <recovery>
 	<details>
 		<resolution width="1080" height="1920"/>
-		<author>TeamWin</author>
-		<title>TWRP</title>
+		<author>Eureka</author>
+		<title>EK</title>
 		<description>splash screen</description>
 		<themeversion>{themeversion}</themeversion>
 	</details>
 
 	<resources>
-		<font name="font_l" filename="RobotoCondensed-Regular.ttf" size="52"/>
-		<image name="splashlogo" filename="splashlogo" retainaspect="1"/>
-		<image name="splashteamwin" filename="splashteamwin" retainaspect="1"/>
+		<font name="font_l" filename="SamsungSharpSans-Bold.ttf" size="52"/>
+		<image name="eklogo" filename="eklogo" retainaspect="1"/>
+		<image name="eksplash" filename="eksplash" retainaspect="1"/>
 	</resources>
 
 	<variables>
 		<variable name="screen_width" value="1080"/>
 		<variable name="screen_height" value="1920"/>
-		<variable name="background_color" value="#222222"/>
-		<variable name="header_color" value="#555555"/>
-		<variable name="accent_color" value="#0090CA"/>
+		<variable name="background_color" value="#000000"/>
+		<variable name="header_color" value="#000000"/>
+		<variable name="accent_color" value="#08f"/>
 	</variables>
 
 	<pages>
@@ -31,12 +31,12 @@
 			</fill>
 
 			<image>
-				<image resource="splashlogo"/>
+				<image resource="eklogo"/>
 				<placement x="540" y="456" placement="4"/>
 			</image>
 
 			<image>
-				<image resource="splashteamwin"/>
+				<image resource="eksplash"/>
 				<placement x="540" y="1540" placement="4"/>
 			</image>
 

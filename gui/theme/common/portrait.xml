@@ -10,7 +10,7 @@
 		</style>
 
 		<style name="text_m_accent">
-			<font resource="font_m" color="%accent_color%"/>
+			<font resource="font_m" color="%text_color%"/>
 		</style>
 
 		<style name="text_m_fail">
@@ -75,51 +75,51 @@
 		</style>
 
 		<style name="console">
-			<fastscroll rectcolor="%accent_color%" w="%fastscroll_w%" rectw="%fastscroll_rectw%" recth="%fastscroll_recth%"/>
+			<fastscroll rectcolor="%fastscroll_color%" w="%fastscroll_w%" rectw="%fastscroll_rectw%" recth="%fastscroll_recth%"/>
 			<color foreground="%text_color%" background="%background_color%" scroll="%background_color%"/>
 			<font resource="fixed"/>
 		</style>
 
 		<style name="terminal">
-			<fastscroll linecolor="%transparent%" rectcolor="%accent_color%" w="%fastscroll_w%" rectw="%fastscroll_rectw%" recth="%fastscroll_recth%"/>
+			<fastscroll linecolor="%transparent%" rectcolor="%fastscroll_color%" w="%fastscroll_w%" rectw="%fastscroll_rectw%" recth="%fastscroll_recth%"/>
 			<background color="%background_color%"/>
 			<font resource="fixed" spacing="3" color="%text_color%"/>
 		</style>
 
 		<style name="fileselector">
 			<highlight color="%fileselector_highlight_color%"/>
-			<header background="%background_color%" textcolor="%accent_color%" separatorcolor="%accent_color%" separatorheight="%fileselector_separatorheight%"/>
-			<fastscroll linecolor="%fileselector_linecolor%" rectcolor="%accent_color%" w="%fastscroll_w%" linew="%fastscroll_linew%" rectw="%fastscroll_rectw%" recth="%fastscroll_recth%"/>
-			<separator color="%fileselector_linecolor%" height="%fileselector_separatorheight%"/>
+			<header background="%background_color%" textcolor="%text_color%" separatorcolor="%accent_color%" separatorheight="%fileselector_separatorheight%"/>
+			<fastscroll linecolor="%transparent%" rectcolor="%fastscroll_color%" w="%fastscroll_w%" linew="%fastscroll_linew%" rectw="%fastscroll_rectw%" recth="%fastscroll_recth%"/>
+			<separator color="%fileselector_seperator%" height="%fileselector_separatorheight%"/>
 			<sort name="tw_gui_sort_order"/>
 			<icon folder="folder" file="file"/>
 			<background color="%background_color%"/>
-			<font resource="font_m" spacing="%fileselector_spacing%" color="%text_color%" highlightcolor="%accent_color%"/>
+			<font resource="font_m" spacing="%fileselector_spacing%" color="%text_color%" highlightcolor="%highlight_color2%"/>
 		</style>
 
 		<style name="listbox">
 			<highlight color="%fileselector_highlight_color%"/>
-			<header background="%background_color%" textcolor="%accent_color%" separatorcolor="%accent_color%" separatorheight="%fileselector_separatorheight%"/>
-			<fastscroll linecolor="%fileselector_linecolor%" rectcolor="%accent_color%" w="%fastscroll_w%" linew="%fastscroll_linew%" rectw="%fastscroll_rectw%" recth="%fastscroll_recth%"/>
-			<separator color="%fileselector_linecolor%" height="%fileselector_separatorheight%"/>
+			<header background="%background_color%" textcolor="%text_color%" separatorcolor="%accent_color%" separatorheight="%fileselector_separatorheight%"/>
+			<fastscroll linecolor="%transparent%" rectcolor="%fastscroll_color%" w="%fastscroll_w%" linew="%fastscroll_linew%" rectw="%fastscroll_rectw%" recth="%fastscroll_recth%"/>
+			<separator color="%fileselector_seperator%" height="%fileselector_separatorheight%"/>
 			<icon selected="radio_true" unselected="radio_false"/>
 			<background color="%background_color%"/>
-			<font resource="font_m" spacing="%fileselector_spacing%" color="%text_color%" highlightcolor="%accent_color%"/>
+			<font resource="font_m" spacing="%fileselector_spacing%" color="%text_color%" highlightcolor="%highlight_color2%"/>
 		</style>
 
 		<style name="scrolllist">
 			<background color="%background_color%"/>
 			<font resource="font_m" spacing="%fileselector_spacing%" color="%text_color%"/>
-			<fastscroll linecolor="%fileselector_linecolor%" rectcolor="%accent_color%" w="%fastscroll_w%" linew="%fastscroll_linew%" rectw="%fastscroll_rectw%" recth="%fastscroll_recth%"/>
+			<fastscroll linecolor="%fileselector_linecolor%" rectcolor="%fastscroll_color%" w="%fastscroll_w%" linew="%fastscroll_linew%" rectw="%fastscroll_rectw%" recth="%fastscroll_recth%"/>
 		</style>
 
 		<style name="partitionlist">
 			<highlight color="%fileselector_highlight_color%"/>
-			<header background="%background_color%" textcolor="%accent_color%" separatorcolor="%accent_color%" separatorheight="%fileselector_separatorheight%"/>
-			<fastscroll linecolor="%fileselector_linecolor%" rectcolor="%accent_color%" w="%fastscroll_w%" linew="%fastscroll_linew%" rectw="%fastscroll_rectw%" recth="%fastscroll_recth%"/>
+			<header background="%background_color%" textcolor="%text_color%" separatorcolor="%accent_color%" separatorheight="%fileselector_separatorheight%"/>
+			<fastscroll linecolor="%transparent%" rectcolor="%fastscroll_color%" w="%fastscroll_w%" linew="%fastscroll_linew%" rectw="%fastscroll_rectw%" recth="%fastscroll_recth%"/>
 			<dimensions lineh="%slidervalue_lineh%" linepadding="%slidervalue_padding%" sliderw="%slidervalue_sliderw%" sliderh="%slidervalue_sliderh%"/>
 			<icon selected="checkbox_true" unselected="checkbox_false"/>
-			<separator color="%fileselector_linecolor%" height="%fileselector_separatorheight%"/>
+			<separator color="%fileselector_seperator%" height="%fileselector_separatorheight%"/>
 			<background color="%background_color%"/>
 			<font resource="font_m" spacing="%partitionlist_spacing%" color="%text_color%" highlightcolor="%fileselector_highlight_font_color%"/>
 		</style>
@@ -127,32 +127,32 @@
 		<style name="partitionlist_storage">
 			<highlight color="%fileselector_highlight_color%"/>
 			<placement x="%col1_x_left%" y="%row5_y%" w="%content_overlay_width%" h="%partitionlist_storage_height%"/>
-			<header background="%background_color%" textcolor="%accent_color%" separatorcolor="%accent_color%" separatorheight="%fileselector_separatorheight%"/>
-			<fastscroll linecolor="%fileselector_linecolor%" rectcolor="%accent_color%" w="%fastscroll_w%" linew="%fastscroll_linew%" rectw="%fastscroll_rectw%" recth="%fastscroll_recth%"/>
+			<header background="%background_color%" textcolor="%text_color%" separatorcolor="%accent_color%" separatorheight="%fileselector_separatorheight%"/>
+			<fastscroll linecolor="%transparent%" rectcolor="%fastscroll_color%" w="%fastscroll_w%" linew="%fastscroll_linew%" rectw="%fastscroll_rectw%" recth="%fastscroll_recth%"/>
 			<dimensions lineh="%slidervalue_lineh%" linepadding="%slidervalue_padding%" sliderw="%slidervalue_sliderw%" sliderh="%slidervalue_sliderh%"/>
 			<icon selected="radio_true" unselected="radio_false"/>
-			<separator color="%fileselector_linecolor%" height="%fileselector_separatorheight%"/>
+			<separator color="%fileselector_seperatorr%" height="%fileselector_separatorheight%"/>
 			<background color="%background_color%"/>
 			<font resource="font_m" spacing="%partitionlist_spacing%" color="%text_color%" highlightcolor="%fileselector_highlight_font_color%"/>
 		</style>
 
 		<style name="advanced_listbox">
 			<highlight color="%fileselector_highlight_color%"/>
-			<fastscroll linecolor="%fileselector_linecolor%" rectcolor="%accent_color%" w="%fastscroll_w%" linew="%fastscroll_linew%" rectw="%fastscroll_rectw%" recth="%fastscroll_recth%"/>
-			<separator color="%fileselector_linecolor%" height="%fileselector_separatorheight%"/>
+			<fastscroll linecolor="%transparent%" rectcolor="%fastscroll_color%" w="%fastscroll_w%" linew="%fastscroll_linew%" rectw="%fastscroll_rectw%" recth="%fastscroll_recth%"/>
+			<separator color="%fileselector_seperator%" height="%fileselector_separatorheight%"/>
 			<dimensions lineh="%slidervalue_lineh%" linepadding="%slidervalue_padding%" sliderw="%slidervalue_sliderw%" sliderh="%slidervalue_sliderh%"/>
 			<icon selected="handle" unselected="handle"/>
 			<background color="%background_color%"/>
-			<font resource="font_m" spacing="%fileselector_spacing%" color="%text_color%" highlightcolor="%accent_color%"/>
+			<font resource="font_m" spacing="%fileselector_spacing%" color="%text_color%" highlightcolor="%highlight_color2%"/>
 		</style>
 
 		<style name="options_listbox">
 			<highlight color="%fileselector_highlight_color%"/>
-			<fastscroll linecolor="%fileselector_linecolor%" rectcolor="%accent_color%" w="%fastscroll_w%" linew="%fastscroll_linew%" rectw="%fastscroll_rectw%" recth="%fastscroll_recth%"/>
+			<fastscroll linecolor="%%" rectcolor="%fastscroll_color%" w="%fastscroll_w%" linew="%fastscroll_linew%" rectw="%fastscroll_rectw%" recth="%fastscroll_recth%"/>
 			<separator color="%background_color%" height="%fileselector_separatorheight%"/>
 			<dimensions lineh="%slidervalue_lineh%" linepadding="%slidervalue_padding%" sliderw="%slidervalue_sliderw%" sliderh="%slidervalue_sliderh%"/>
 			<background color="%background_color%"/>
-			<font resource="font_m" spacing="%fileselector_spacing%" color="%text_color%" highlightcolor="%accent_color%"/>
+			<font resource="font_m" spacing="%fileselector_spacing%" color="%text_color%" highlightcolor="%highlight_color2%"/>
 		</style>
 
 		<style name="slider">
@@ -188,7 +188,15 @@
 
 			<text style="text_l">
 				<placement x="%col1_x_header%" y="%row3_header_y%"/>
-				<text>{@twrp_header=Team Win Recovery Project}</text>
+				<text>{@twrp_header=Eureka Recovery Project}</text>
+        <text>{@twrp_header2=based on TWRP}</text>
+        <text>based on TWRP</text>
+			</text>
+
+			<text style="text_m">
+				<placement x="%col1_x_header%" y="%row35_header_y%"/>
+				<text>{@twrp_header2=based on TWRP}</text>
+        <text>based on TWRP</text>
 			</text>
 
 			<text style="text_m">
@@ -245,7 +253,7 @@
 
 			<button style="main_button">
 				<placement x="%center_x%" y="%row19_y%"/>
-				<text>{@reboot_btn=Reboot}</text>
+				<text>{@reboot_btn=Powermenu}</text>
 				<action function="page">reboot</action>
 			</button>
 		</page>
@@ -3639,7 +3647,7 @@
 
 			<listbox style="advanced_listbox">
 				<placement x="%indent%" y="%row13a_y%" w="%content_width%" h="%listbox_advanced_height%"/>
-				<listitem name="{@change_twrp_folder_btn=Change TWRP folder}">
+				<listitem name="{@change_twrp_folder_btn=Change EKRP folder}">
 					<condition var1="tw_is_encrypted" var2="0"/>
 					<action function="page">changeTwrpFolder</action>
 				</listitem>
@@ -4160,7 +4168,7 @@
 			</image>
 
 			<slider>
-				<text>{@swipe_to_unlock=Swipe to Unlock}</text>
+				<text>{@swipe_to_unlock}</text>
 				<action function="overlay"/>
 			</slider>
 
