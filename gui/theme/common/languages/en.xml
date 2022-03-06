@@ -59,7 +59,7 @@
 		<string name="mount_btn">Mount</string>
 		<string name="settings_btn">Settings</string>
 		<string name="advanced_btn">Advanced</string>
-		<string name="reboot_btn">Powermen&#252;</string>
+		<string name="reboot_btn">Powermenu</string>
     <string name="about_btn">About</string>
 		<string name="files_btn">Files</string>
 		<string name="copy_log_btn">Copy Log</string>
@@ -290,11 +290,11 @@
 		<string name="usb_stor_mnt2">Be sure to safely remove your device</string>
 		<string name="usb_stor_mnt3">from your computer before unmounting!</string>
 		<string name="unmount_btn">Unmount</string>
-		<string name="rb_system_btn">Reboot to System</string>
-		<string name="rb_poweroff_btn">Power Off Phone</string>
-		<string name="rb_recovery_btn">Reboot to Recovery</string>
+		<string name="rb_system_btn"></string>
+		<string name="rb_poweroff_btn"></string>
+		<string name="rb_recovery_btn"></string>
 		<string name="rb_bootloader_btn">Reboot to Bootloader</string>
-		<string name="rb_download_btn">Reboot to Downloadmode</string>
+		<string name="rb_download_btn"></string>
 		<string name="rb_edl_btn">Reboot to EDL Mode</string>
 		<string name="turning_off">Turning Off...</string>
 		<string name="swipe_power_off">Swipe to Power Off Phone</string>
@@ -492,7 +492,7 @@
 		<string name="swipe_fix_contexts">   Fix Contexts</string>
 		<string name="fixing_contexts">Fixing Contexts...</string>
 		<string name="fix_contexts_complete">Fix Contexts Complete</string>
-		<string name="reboot_hdr">Powermen&#252;</string>
+		<string name="reboot_hdr">Powermenu</string>
 		<string name="install_cancel">Do Not Install</string>
 		<string name="sel_storage_list">Select Storage</string>
 		<string name="ok_btn">OK</string>

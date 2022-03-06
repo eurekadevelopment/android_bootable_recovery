@@ -27,6 +27,10 @@
     <image name="temp" filename="temp" retainaspect="1"/>
     <image name="batt" filename="batt" retainaspect="1"/>
 		<image name="main_button" filename="main_button"/>
+    <image name="main_button_poweroff" filename="main_button_poweroff" retainaspect="1"/>
+    <image name="main_button_system" filename="main_button_system" retainaspect="1"/>
+    <image name="main_button_recovery" filename="main_button_recovery" retainaspect="1"/>
+    <image name="main_button_downloadmode" filename="main_button_downloadmode" retainaspect="1"/>
 		<image name="main_button_half_height" filename="main_button_half_height"/>
 		<image name="main_button_half_height_full_width" filename="main_button_half_height_full_width"/>
 		<image name="fab_selectfolder" filename="fab_selectfolder" retainaspect="1"/>
@@ -91,7 +95,8 @@
 		<variable name="col1_x_header" value="190"/>
     <variable name="col1_x_header_cpu" value="150"/>
     <variable name="col1_x_header_batt" value="880"/>
-		<variable name="center_x" value="540"/>
+		<variable name="center_x_power" value="380"/>
+    <variable name="center_x" value="540"/>
 		<variable name="center_x_clock" value="280"/>
 		<variable name="col1_x_right" value="576"/>
 		<variable name="indent_right" value="1044"/>
@@ -124,6 +129,7 @@
 		<variable name="row1_header_y_batt" value="12"/>
 		<variable name="row2_header_y" value="72"/>
 		<variable name="row3_header_y" value="90"/>
+		<variable name="row3_header_y_power" value="120"/>
 		<variable name="row35_header_y" value="136"/>
 		<variable name="row4_header_y" value="168"/>
 		<variable name="row1_y" value="256"/>
@@ -149,6 +155,7 @@
 		<variable name="row9_y" value="768"/>
 		<variable name="row9a_y" value="800"/>
 		<variable name="row10_y" value="832"/>
+		<variable name="row10_y_power" value="850"/>
 		<variable name="row10a_y" value="864"/>
 		<variable name="row11_y" value="896"/>
 		<variable name="row11a_y" value="928"/>
@@ -255,12 +262,12 @@
 			<image>
 				<condition var1="tw_busy" var2="1"/>
 				<image resource="logo"/>
-				<placement x="0" y="0"/>
+				<placement x="%indent%" y="0"/>
 			</image>
 
 			<button>
 				<condition var1="tw_busy" var2="0"/>
-				<placement x="0" y="0"/>
+				<placement x="%indent%" y="0"/>
 				<image resource="logo"/>
 				<action function="key">home</action>
 			</button>
