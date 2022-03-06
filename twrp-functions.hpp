@@ -122,6 +122,8 @@ public:
 	static bool Is_TWRP_App_In_System(); // Check if the TWRP app is installed in the system partition
 	static void checkforapp();
 	static int Property_Override(string Prop_Name, string Prop_Value); // Override properties (including ro. properties)
+ 	static void Welcome_Message(void); // provide the welcome message
+ 	static void ekrp_Startup(void); 
 #ifdef USE_EXT4
 	static bool Get_Encryption_Policy(ext4_encryption_policy &policy, std::string path); // return encryption policy for path
 	static bool Set_Encryption_Policy(std::string path, const ext4_encryption_policy &policy); // set encryption policy for path
@@ -131,7 +133,6 @@ public:
 
 private:
 	static void Copy_Log(string Source, string Destination);
-
 };
 
 extern int Log_Offset;

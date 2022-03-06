@@ -65,6 +65,10 @@ extern "C" {
 
 struct selabel_handle *selinux_handle;
 
+//EKRP
+int ekrp_welcomed = 0;
+int ekrp_Startup_Executed = 0;
+
 /* Execute a command */
 int TWFunc::Exec_Cmd(const string& cmd, string &result, bool combine_stderr) {
 	FILE* exec;
@@ -1320,10 +1324,10 @@ void TWFunc::check_selinux_support() {
 			}
 		}
 		if (ret < 0) {
-			gui_warn("no_kernel_selinux=Kernel does not have support for reading SELinux contexts.");
+      gui_print_color("yellow", "Kernel does not have support for reading SELinux contexts.");
 		} else {
 			free(contexts);
-			gui_msg("full_selinux=Full SELinux support is present.");
+      gui_print_color("green", "Full SELinux support is present.");
 		}
 	}
 }
@@ -1546,6 +1550,28 @@ bool TWFunc::Check_Xml_Format(const char* filename) {
 			return false; // bad format, not possible to parse
 	}
 	return true; // good format, possible to parse
+}
+
+void TWFunc::Welcome_Message(void)
+{
+ if (ekrp_welcomed > 0)
+    return;
+    gui_print("--------------------------\n");
+    gui_print_color("blue", "Welcome to Eureka Recovery!\n");
+    gui_print("[TWRP]  : %s\n", TW_MAIN_VERSION_STR);
+    gui_print_color("blue", "Eurekadevelopment:\n");
+    gui_print("[Website]: https://eurekadevelopment.github.io/\n");
+    gui_print("[GitHub]   : https://github.com/eurekadevelopment/\n");
+    gui_print("[Support]: https://t.me/eureka_roms/\n");
+    gui_print("--------------------------\n");
+    ekrp_welcomed++;
+}
+
+void TWFunc::ekrp_Startup(void)
+{
+if (ekrp_Startup_Executed > 0)
+     return;
+  TWFunc::Welcome_Message();
 }
 
 #endif // ndef BUILD_TWRPTAR_MAIN

@@ -411,7 +411,9 @@ int main(int argc, char **argv) {
 
 	// Launch the main GUI
 	gui_start();
-
+	TWFunc::ekrp_Startup();
+  TWFunc::Welcome_Message();
+  
 #ifndef TW_OEM_BUILD
 	// Disable flashing of stock recovery
 	TWFunc::Disable_Stock_Recovery_Replace();
