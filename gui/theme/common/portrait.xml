@@ -211,22 +211,14 @@
 			<template name="page"/>
 
 			<text style="text_l">
-				<placement x="%col1_x_header%" y="%row3_header_y%"/>
+				<placement x="%col1_x_header_ekrp%" y="%row3_header_y_main%"/>
 				<text>{@twrp_header=Eureka Recovery Project}</text>
-        <text>{@twrp_header2=based on TWRP}</text>
-        <text>based on TWRP</text>
-			</text>
-
-			<text style="text_m">
-				<placement x="%col1_x_header%" y="%row35_header_y%"/>
-				<text>{@twrp_header2=based on TWRP}</text>
-        <text>based on TWRP</text>
 			</text>
 
 			<text style="text_m">
 				<condition var1="tw_no_cpu_temp" var2="0"/>
-				<placement x="%col1_x_header%" y="%row4_header_y%"/>
-				<text>%tw_version%</text>
+				<placement x="%col1_x_header_ver%" y="%row4_header_y%"/>
+				
 			</text>
 
 			<button style="main_button">
@@ -284,7 +276,7 @@
 			<button style="main_button">
 				<placement x="%center_x%" y="%row19_y_about%"/>
 				<text>{@about_btn=About}</text>
-				<action function="page">reboot</action>
+				<action function="page">about</action>
 			</button>
 		</page>
 
@@ -3078,6 +3070,45 @@
 				</actions>
 			</button>
 
+			<action>
+				<touch key="home"/>
+				<action function="page">main</action>
+			</action>
+
+			<action>
+				<touch key="back"/>
+				<action function="page">main</action>
+			</action>
+		</page>
+   
+   	<page name="about">
+			<template name="page"/>
+
+			<text style="text_l">
+				<placement x="470" y="120"/>
+				<text>{@about_hdr=About}</text>
+			</text>
+      
+			<image>
+				<image resource="eklogo"/>
+				<placement x="540" y="550" placement="4"/>
+			</image>
+      
+			<text style="text_m">
+				<placement x="%center_x%" y="%row10_y%" placement="5"/>
+				<text>{@about_ekrp=Eureka Recovery Project}</text>
+			</text>
+      
+			<text style="text_m">
+				<placement x="%center_x%" y="%row11_y%" placement="5"/>
+				<text>{@about_base=Based on TWRP}</text>
+			</text>
+          
+			<text style="text_m">
+				<placement x="%center_x%" y="%row12_y%" placement="5"/>
+				<text>{@about_devices=Supported Devices: A10/A20/A20e/A30/A40}</text>
+			</text>
+            
 			<action>
 				<touch key="home"/>
 				<action function="page">main</action>

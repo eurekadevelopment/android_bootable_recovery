@@ -34,7 +34,7 @@
 
 		<!-- GUI XML strings -->
 		<string name="twrp_header">Eureka Recovery Project</string>
-    <string name="twrp_header2">based on TWRP</string>
+    <string name="twrp_ver">[TWRP]&#032;</string>
 		<string name="twrp_watch_header">%tw_version%</string>
 		<string name="cpu_temp">%tw_cpu_temp% &#xB0;C</string>
 		<string name="battery_pct">%tw_battery%</string>
@@ -370,6 +370,10 @@
 		<string name="tz_offset_45">45</string>
 		<string name="use_dst_chk">Use daylight savings time (DST)</string>
 		<string name="curr_tz">Current Time Zone: %tw_time_zone%</string>
+    <string name="about_ekrp">Eureka Recovery Project</string>
+    <string name="about_base">Based on TWRP</string>
+    <string name="placeholder">--------------------------------</string>
+    <string name="about_devices">Supported Devices: A10/A20/A20e/A30/A40</string>
 		<string name="curr_tz_s">Current Time Zone:</string>
 		<string name="set_tz_btn">Set Time Zone</string>
 		<string name="settings_screen_hdr">Screen</string>
@@ -493,6 +497,7 @@
 		<string name="fixing_contexts">Fixing Contexts...</string>
 		<string name="fix_contexts_complete">Fix Contexts Complete</string>
 		<string name="reboot_hdr">Powermenu</string>
+		<string name="about_hdr">About</string>
 		<string name="install_cancel">Do Not Install</string>
 		<string name="sel_storage_list">Select Storage</string>
 		<string name="ok_btn">OK</string>
