@@ -378,6 +378,7 @@ protected:
 #endif
 	int applycustomtwrpfolder(std::string arg);
 
+	int flashlight(std::string arg);
 	int simulate;
 };
 

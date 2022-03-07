@@ -274,6 +274,12 @@
 			</button>
 
 			<button style="main_button">
+				<placement x="%indent%" y="%row19_y_about%"/>
+				<text>{@flash_btn=Flashlight}</text>
+				<action function="flashlight" />
+			</button>
+
+			<button style="main_button">
 				<placement x="%center_x%" y="%row19_y_about%"/>
 				<text>{@about_btn=About}</text>
 				<action function="page">about</action>

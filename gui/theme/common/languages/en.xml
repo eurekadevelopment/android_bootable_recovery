@@ -60,6 +60,7 @@
 		<string name="settings_btn">Settings</string>
 		<string name="advanced_btn">Advanced</string>
 		<string name="reboot_btn">Powermenu</string>
+    <string name="flash_btn">Flashlight</string>
     <string name="about_btn">About</string>
 		<string name="files_btn">Files</string>
 		<string name="copy_log_btn">Copy Log</string>

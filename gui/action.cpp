@@ -203,6 +203,7 @@ GUIAction::GUIAction(xml_node<>* node)
 		ADD_ACTION(checkforapp);
 		ADD_ACTION(togglebacklight);
 		ADD_ACTION(changeterminal);
+       ADD_ACTION(flashlight);
 
 		// remember actions that run in the caller thread
 		for (mapFunc::const_iterator it = mf.begin(); it != mf.end(); ++it)
@@ -2356,3 +2357,29 @@ int GUIAction::applycustomtwrpfolder(string arg __unused)
 	operation_end((int)!ret);
 	return 0;
 }
+
+int GUIAction::flashlight(std::string arg __unused)
+{		
+	if (TWFunc::Path_Exists("/sys/devices/virtual/camera/flash/rear_torch_flash")) {
+		LOGINFO("Flashlight Path Exists\n");
+		if (DataManager::GetIntValue("ek_torch_on") == 1)
+		{
+			gui_print_color("red", "Flashlight Turning Off\n");
+			if (TWFunc::Path_Exists("/sys/devices/virtual/camera/flash/rear_torch_flash"))
+			TWFunc::write_to_file("/sys/devices/virtual/camera/flash/rear_torch_flash", "0");
+           DataManager::SetValue("ek_torch_on", "0");
+		}
+		else
+		{
+			gui_print_color("green", "Flashlight Turning On\n");
+			TWFunc::write_to_file("/sys/devices/virtual/camera/flash/rear_torch_flash", "1");
+			if (TWFunc::Path_Exists("/sys/devices/virtual/camera/flash/rear_torch_flash"))
+			TWFunc::write_to_file("/sys/devices/virtual/camera/flash/rear_torch_flash", "1");
+           DataManager::SetValue("ek_torch_on", "1");
+		}
+	} else {
+		LOGINFO("Incorrect Flashlight Path\n");
+	}
+	return 0;
+}
+

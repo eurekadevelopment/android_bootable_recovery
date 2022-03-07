@@ -578,6 +578,7 @@ void DataManager::SetDefaultValues()
 	mConst.SetValue("false", "0");
 
 	mConst.SetValue(TW_VERSION_VAR, TW_VERSION_STR);
+   mData.SetValue("ek_torch_on", "0");
 
 #ifndef TW_NO_HAPTICS
 	mPersist.SetValue("tw_button_vibrate", "80");
