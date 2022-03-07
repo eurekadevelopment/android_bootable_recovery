@@ -3,6 +3,8 @@ include $(CLEAR_VARS)
 
 LOCAL_CFLAGS := -fno-strict-aliasing
 
+include $(LOCAL_PATH)/../ekrp.mk
+
 LOCAL_SRC_FILES := \
     gui.cpp \
     resources.cpp \

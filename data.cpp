@@ -579,6 +579,16 @@ void DataManager::SetDefaultValues()
 
 	mConst.SetValue(TW_VERSION_VAR, TW_VERSION_STR);
 
+  mConst.SetValue(EK_FLASHLIGHT_ENABLE_STR, EK_FLASHLIGHT_ENABLE);
+  
+  #ifdef EK_FLASHLIGHT_ENABLE 
+    if (EK_FLASHLIGHT_ENABLE == "1") {
+      mConst.SetValue("ek_fl_path_1", EK_FL_PATH1);
+      mConst.SetValue("ek_fl_path_2", EK_FL_PATH2);
+      mData.SetValue("ek_flash_on", "0");
+    }
+  #endif
+  
 #ifndef TW_NO_HAPTICS
 	mPersist.SetValue("tw_button_vibrate", "80");
 	mPersist.SetValue("tw_keyboard_vibrate", "40");
@@ -738,6 +748,8 @@ void DataManager::SetDefaultValues()
 	mConst.SetValue(TW_MIN_SYSTEM_VAR, TW_MIN_SYSTEM_SIZE);
 	mData.SetValue(TW_BACKUP_NAME, "(Auto Generate)");
 
+  mData.SetValue(EK_FLASHLIGHT_VAR, "0");
+
 	mPersist.SetValue(TW_INSTALL_REBOOT_VAR, "0");
 	mPersist.SetValue(TW_SIGNED_ZIP_VERIFY_VAR, "0");
 	mPersist.SetValue(TW_DISABLE_FREE_SPACE_VAR, "0");
@@ -755,8 +767,7 @@ void DataManager::SetDefaultValues()
 	mPersist.SetValue(TW_TIME_ZONE_GUISEL, "CST6;CDT,M3.2.0,M11.1.0");
 	mPersist.SetValue(TW_TIME_ZONE_GUIOFFSET, "0");
 	mPersist.SetValue(TW_TIME_ZONE_GUIDST, "1");
-        mPersist.SetValue(TW_AUTO_REFLASHTWRP_VAR, "0");
-
+  mPersist.SetValue(TW_AUTO_REFLASHTWRP_VAR, "0");
 	mData.SetValue(TW_ACTION_BUSY, "0");
 	mData.SetValue("tw_wipe_cache", "0");
 	mData.SetValue("tw_wipe_dalvik", "0");

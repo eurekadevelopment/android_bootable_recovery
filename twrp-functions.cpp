@@ -1552,6 +1552,7 @@ bool TWFunc::Check_Xml_Format(const char* filename) {
 	return true; // good format, possible to parse
 }
 
+// EKRP Part
 void TWFunc::Welcome_Message(void)
 {
  if (ekrp_welcomed > 0)
@@ -1560,9 +1561,9 @@ void TWFunc::Welcome_Message(void)
     gui_print_color("blue", "Welcome to Eureka Recovery!\n");
     gui_print("[TWRP]  : %s\n", TW_MAIN_VERSION_STR);
     gui_print_color("blue", "Eurekadevelopment:\n");
-    gui_print("[Website]: https://eurekadevelopment.github.io/\n");
-    gui_print("[GitHub]   : https://github.com/eurekadevelopment/\n");
-    gui_print("[Support]: https://t.me/eureka_roms/\n");
+    gui_print("[Website]: https://eurekadevelopment.github.io\n");
+    gui_print("[GitHub]    : https://github.com/eurekadevelopment\n");
+    gui_print("[Support]: https://t.me/eureka_roms\n");
     gui_print("--------------------------\n");
     ekrp_welcomed++;
 }

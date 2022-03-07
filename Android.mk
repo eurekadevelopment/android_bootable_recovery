@@ -172,6 +172,8 @@ ifneq ($(wildcard system/core/libsparse/Android.mk),)
 LOCAL_SHARED_LIBRARIES += libsparse
 endif
 
+include $(LOCAL_PATH)/ekrp.mk
+
 ifeq ($(TW_OEM_BUILD),true)
     LOCAL_CFLAGS += -DTW_OEM_BUILD
     BOARD_HAS_NO_REAL_SDCARD := true
@@ -948,7 +950,6 @@ include $(commands_TWRP_local_path)/injecttwrp/Android.mk \
 ifeq ($(shell test $(PLATFORM_SDK_VERSION) -lt 24; echo $$?),0)
     include $(commands_TWRP_local_path)/libmincrypt/Android.mk
 endif
-
 ifneq ($(TW_OZIP_DECRYPT_KEY),)
     TWRP_REQUIRED_MODULES += ozip_decrypt
     include $(commands_TWRP_local_path)/ozip_decrypt/Android.mk
