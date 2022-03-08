@@ -27,6 +27,7 @@
 #define TW_ZIP_INDEX                "tw_zip_index"
 #define TW_ZIP_QUEUE_COUNT       "tw_zip_queue_count"
 
+//TWRP Vars
 #define MAX_BACKUP_NAME_LEN 64
 #define TW_BACKUP_TEXT              "tw_backup_text"
 #define TW_BACKUP_NAME		        "tw_backup_name"

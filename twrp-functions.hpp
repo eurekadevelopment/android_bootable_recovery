@@ -130,6 +130,7 @@ public:
 #endif
 	static string Check_For_TwrpFolder();
 	static bool Check_Xml_Format(const char* filename); // Return whether a xml is in plain xml or ABX format
+ 	static string File_Property_Get(string File_Path, string Prop_Name);                // Returns specified property value from the file
 
 private:
 	static void Copy_Log(string Source, string Destination);

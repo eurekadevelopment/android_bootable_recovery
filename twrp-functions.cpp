@@ -903,6 +903,7 @@ string TWFunc::Get_Current_Date() {
 }
 
 string TWFunc::System_Property_Get(string Prop_Name) {
+
 	return System_Property_Get(Prop_Name, PartitionManager, PartitionManager.Get_Android_Root_Path(), "build.prop");
 }
 
@@ -1537,6 +1538,34 @@ exit:
 	return TW_DEFAULT_RECOVERY_FOLDER;
 }
 
+string TWFunc::File_Property_Get(string File_Path, string Prop_Name)
+{
+  std::vector < string > buildprop;
+  string propvalue;
+  string prop_file = File_Path;
+  if (TWFunc::read_file(prop_file, buildprop) != 0)
+    {
+      return propvalue;
+    }
+  int line_count = buildprop.size();
+  int index;
+  size_t start_pos = 0, end_pos;
+  string propname;
+  for (index = 0; index < line_count; index++)
+    {
+      end_pos = buildprop.at(index).find("=", start_pos);
+      propname = buildprop.at(index).substr(start_pos, end_pos);
+      if (propname == Prop_Name)
+	{
+	  propvalue =
+	    buildprop.at(index).substr(end_pos + 1,
+				       buildprop.at(index).size());
+	  return propvalue;
+	}
+    }
+  return propvalue;
+}
+
 bool TWFunc::Check_Xml_Format(const char* filename) {
 	std::string buffer(' ', 4);
 	std::string abx_hdr("ABX\x00", 4);
@@ -1551,19 +1580,23 @@ bool TWFunc::Check_Xml_Format(const char* filename) {
 	}
 	return true; // good format, possible to parse
 }
-
+// EKRP Part
 void TWFunc::Welcome_Message(void)
 {
  if (ekrp_welcomed > 0)
     return;
-    gui_print("--------------------------\n");
+    gui_print("-------------------------------\n");
     gui_print_color("blue", "Welcome to Eureka Recovery!\n");
-    gui_print("[TWRP]  : %s\n", TW_MAIN_VERSION_STR);
+    gui_print("[TWRP]: %s\n", TW_MAIN_VERSION_STR);
+	gui_print("[Device]: %s\n", TWFunc::File_Property_Get ("/default.prop", "ro.product.device").c_str());
     gui_print_color("blue", "Eurekadevelopment:\n");
-    gui_print("[Website]: https://eurekadevelopment.github.io/\n");
-    gui_print("[GitHub]   : https://github.com/eurekadevelopment/\n");
-    gui_print("[Support]: https://t.me/eureka_roms/\n");
-    gui_print("--------------------------\n");
+    gui_print("[Website]: https://eurekadevelopment.github.io\n");
+    gui_print("[GitHub]:  https://github.com/eurekadevelopment\n");
+    gui_print("[Support]: https://t.me/eureka_roms\n");
+    gui_print("-------------------------------\n");
+	gui_print_color("green", "Your device:\n");
+	gui_print("[Name]: %s\n", TWFunc::File_Property_Get ("/default.prop", "ro.display.series").c_str());
+	gui_print("[Model]: %s\n", TWFunc::File_Property_Get ("/default.prop", "ro.product.model").c_str());
     ekrp_welcomed++;
 }
 
@@ -1573,5 +1606,6 @@ if (ekrp_Startup_Executed > 0)
      return;
   TWFunc::Welcome_Message();
 }
+
 
 #endif // ndef BUILD_TWRPTAR_MAIN
