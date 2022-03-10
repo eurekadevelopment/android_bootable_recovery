@@ -275,8 +275,8 @@
 
 			<button style="main_button">
 				<placement x="%indent%" y="%row19_y_about%"/>
-				<text>{@flash_btn=Flashlight}</text>
-				<action function="flashlight" />
+				<text>{@tools_btn=Tools}</text>
+				<action function="page">tools</action>
 			</button>
 
 			<button style="main_button">
@@ -817,7 +817,7 @@
 			<template name="page"/>
 
 			<text style="text_l">
-				<placement x="%col1_x_header%" y="%row3_header_y%"/>
+				<placement x="%col1_x_header%" y="%row3_header_y_main%"/>
 				<text>{@confirm_action=Confirm Action}</text>
 			</text>
 
@@ -3086,8 +3086,88 @@
 				<action function="page">main</action>
 			</action>
 		</page>
-   
-   	<page name="about">
+
+   		<page name="tools">
+			<template name="page"/>
+
+			<text style="text_l">
+				<placement x="470" y="120"/>
+				<text>{@tools_hdr=Tools}</text>
+			</text>
+
+			<button style="main_button">
+				<placement x="%indent%" y="%row2a_y%"/>
+				<text>{@magisk_btn=Install Magisk}</text>
+				<actions>
+					<action function="set">tw_back=tools</action>
+					<action function="set">tw_filename=/sdcard/EKRP/addons/magisk.zip</action>
+					<action function="set">tw_action=queuezip</action>
+					<action function="set">_install_built_in_zip=1</action>
+					<action function="set">tw_has_action2=1</action>
+					<action function="set">tw_action2=flash</action>
+					<action function="set">tw_action2_param=flash_zip</action>
+					<action function="set">tw_text1={@root_text=Magisk will be installed.}</action>
+					<action function="set">tw_text2={@root_confirm=Try to install it?}</action>
+					<action function="set">tw_slider_text={@swipe_to_confirm=Swipe to Confirm}</action>
+					<action function="page">confirm_action</action>
+				</actions>
+			</button>
+
+			<button style="main_button">
+				<placement x="%center_x%" y="%row2a_y%"/>
+				<text>{@unmagisk_btn=Uninstall Magisk}</text>
+				<actions>
+					<action function="set">tw_back=tools</action>
+					<action function="set">tw_filename=/sdcard/EKRP/addons/magiskuninstaller.zip</action>
+					<action function="set">tw_action=queuezip</action>
+					<action function="set">tw_has_action2=1</action>
+					<action function="set">tw_action2=flash</action>
+					<action function="set">tw_action2_param=flash_zip</action>
+					<action function="set">tw_text1={@unroot_text=Magisk will be uninstalled.}</action>
+					<action function="set">tw_text2={@unroot_confirm=Try to install it?}</action>
+					<action function="set">tw_slider_text={@swipe_to_confirm=Swipe to Confirm}</action>
+					<action function="page">confirm_action</action>
+				</actions>
+			</button>
+
+			<button style="main_button">
+				<placement x="%indent%" y="%row8_y%"/>
+				<text>{@dmverity_btn=DM-Verity}</text>
+				<actions>
+					<action function="set">tw_back=tools</action>
+					<action function="set">tw_filename=/sdcard/EKRP/addons/dmverity.zip</action>
+					<action function="set">tw_action=queuezip</action>
+					<action function="set">tw_has_action2=1</action>
+					<action function="set">tw_action2=flash</action>
+					<action function="set">tw_action2_param=flash_zip</action>
+					<action function="set">tw_text1={@dmverity_text=DM-Verity Force Entcryption will be installed.}</action>
+					<action function="set">tw_text2={@dmverity_confirm=Try to install it?}</action>
+					<action function="set">tw_slider_text={@swipe_to_confirm=Swipe to Confirm}</action>
+					<action function="page">confirm_action</action>
+				</actions>
+			</button>		
+
+			<button style="main_button">
+				<placement x="%center_x%" y="%row8_y%"/>
+				<text>{@flash_btn=Flashlight}</text>
+				<action function="flashlight" />
+			</button>
+
+			<action>
+				<touch key="home"/>
+				<action function="page">main</action>
+			</action>
+
+		<action>
+				<touch key="back"/>
+				<actions>
+					<action function="page">tools</action>
+				</actions>
+			</action>
+		</page>
+
+
+   		<page name="about">
 			<template name="page"/>
 
 			<text style="text_l">
@@ -3646,7 +3726,7 @@
 			<template name="page"/>
 
 			<text style="text_l">
-				<placement x="%col1_x_header%" y="%row3_header_y%"/>
+				<placement x="%col1_x_header%" y="%row3_header_y_main%"/>
 				<text>{@copying_log=Copy Logs to SD Card}</text>
 			</text>
 
@@ -3691,7 +3771,7 @@
 			<template name="page"/>
 
 			<text style="text_l">
-				<placement x="%col1_x_header%" y="%row3_header_y%"/>
+				<placement x="%col1_x_header%" y="%row3_header_y_main%"/>
 				<text>{@advanced_hdr=Advanced}</text>
 			</text>
 

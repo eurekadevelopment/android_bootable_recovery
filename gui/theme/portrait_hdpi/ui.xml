@@ -24,13 +24,13 @@
 		<font name="keylabel-longpress" filename="SamsungSharpSans-Bold.ttf" size="26"/>
 
 		<image name="logo" filename="logo" retainaspect="1"/>
-    <image name="temp" filename="temp" retainaspect="1"/>
-    <image name="batt" filename="batt" retainaspect="1"/>
+    	<image name="temp" filename="temp" retainaspect="1"/>
+    	<image name="batt" filename="batt" retainaspect="1"/>
 		<image name="main_button" filename="main_button"/>
-    <image name="main_button_poweroff" filename="main_button_poweroff" retainaspect="1"/>
-    <image name="main_button_system" filename="main_button_system" retainaspect="1"/>
-    <image name="main_button_recovery" filename="main_button_recovery" retainaspect="1"/>
-    <image name="main_button_downloadmode" filename="main_button_downloadmode" retainaspect="1"/>
+    	<image name="main_button_poweroff" filename="main_button_poweroff" retainaspect="1"/>
+    	<image name="main_button_system" filename="main_button_system" retainaspect="1"/>
+    	<image name="main_button_recovery" filename="main_button_recovery" retainaspect="1"/>
+    	<image name="main_button_downloadmode" filename="main_button_downloadmode" retainaspect="1"/>
 		<image name="main_button_half_height" filename="main_button_half_height"/>
 		<image name="main_button_half_height_full_width" filename="main_button_half_height_full_width"/>
 		<image name="fab_selectfolder" filename="fab_selectfolder" retainaspect="1"/>
@@ -56,7 +56,7 @@
 		<image name="progress_full" filename="progress_fill"/>
 		<image name="slider" filename="slider"/>   
 		<image name="slider_used" filename="slider_used"/>
-    <image name="slider_unused1" filename="slider_unused1"/>      
+    	<image name="slider_unused1" filename="slider_unused1"/>      
 		<image name="slider_touch" filename="slider_touch"/>
 		<image name="handle" filename="handle"/>   
 		<image name="handle1" filename="handle1"/>   
@@ -97,12 +97,12 @@
 		<variable name="indent_cpu" value="62"/>
 		<variable name="col1_x_left" value="72"/>
 		<variable name="col1_x_header" value="190"/>
-    <variable name="col1_x_header_ekrp" value="250"/>
-    <variable name="col1_x_header_ver" value="245"/>
-    <variable name="col1_x_header_cpu" value="150"/>
-    <variable name="col1_x_header_batt" value="880"/>
+    	<variable name="col1_x_header_ekrp" value="250"/>
+    	<variable name="col1_x_header_ver" value="245"/>
+    	<variable name="col1_x_header_cpu" value="150"/>
+    	<variable name="col1_x_header_batt" value="880"/>
 		<variable name="center_x_power" value="380"/>
-    <variable name="center_x" value="540"/>
+    	<variable name="center_x" value="540"/>
 		<variable name="center_x_clock" value="280"/>
 		<variable name="col1_x_right" value="576"/>
 		<variable name="indent_right" value="1044"/>
@@ -135,7 +135,7 @@
 		<variable name="row1_header_y_batt" value="18"/>
 		<variable name="row2_header_y" value="72"/>
 		<variable name="row3_header_y" value="90"/>
-    <variable name="row3_header_y_main" value="120"/>
+    	<variable name="row3_header_y_main" value="120"/>
 		<variable name="row3_header_y_power" value="120"/>
 		<variable name="row35_header_y" value="136"/>
 		<variable name="row4_header_y" value="163"/>
@@ -213,9 +213,9 @@
 		<variable name="warning" value="#F8F8A0"/>
 		<variable name="error" value="#FF0101"/>
 		<variable name="highlight" value="#0090CA"/>
-    <variable name="highlight_color2" value="#0088ff"/>
+    	<variable name="highlight_color2" value="#0088ff"/>
 		<variable name="fileselector_linecolor" value="#00000000"/>
-    <variable name="fileselector_seperator" value="#0088ff"/>
+    	<variable name="fileselector_seperator" value="#0088ff"/>
 		<variable name="fileselector_highlight_color" value="#00000000"/>
 		<variable name="fileselector_separatorheight" value="2"/>
 		<variable name="fileselector_spacing" value="0"/>
@@ -235,7 +235,7 @@
 		<variable name="fastscroll_linew" value="2"/>
 		<variable name="fastscroll_rectw" value="24"/>
 		<variable name="fastscroll_recth" value="108"/>
-    <variable name="fastscroll_color" value="#0088ff"/>
+    	<variable name="fastscroll_color" value="#0088ff"/>
 		<variable name="slidervalue_lineh" value="3"/>
 		<variable name="slidervalue_padding" value="0"/>
 		<variable name="slidervalue_sliderw" value="72"/>
@@ -569,7 +569,7 @@
 
 		<template name="console">
 			<console>
-				<placement x="%indent%" y="%row2_y%" w="%content_width%" h="%console_height%"/>
+				<placement x="%col1_x_left%" y="%row2_y%" w="%content_width%" h="%console_height%"/>
 			</console>
 
 			<fill color="%fileselector_linecolor%">
@@ -583,7 +583,7 @@
 
 		<template name="console_terminal">
 			<console>
-				<placement x="%indent%" y="%row2_y%" w="content_width" h="%console_terminal_height%"/>
+				<placement x="%col1_x_left%" y="%row2_y%" w="content_width" h="%console_terminal_height%"/>
 			</console>
 
 			<fill color="%fileselector_linecolor%">
