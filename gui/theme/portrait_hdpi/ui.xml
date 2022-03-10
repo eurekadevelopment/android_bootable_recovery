@@ -59,6 +59,7 @@
     <image name="slider_unused1" filename="slider_unused1"/>      
 		<image name="slider_touch" filename="slider_touch"/>
 		<image name="handle" filename="handle"/>   
+		<image name="handle1" filename="handle1"/>   
 		<image name="cursor" filename="cursor" retainaspect="1"/>
 		<image name="tab_general" filename="tab_general" retainaspect="1"/>
 		<image name="tab_timezone" filename="tab_timezone" retainaspect="1"/>
