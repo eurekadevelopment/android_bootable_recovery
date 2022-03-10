@@ -186,7 +186,7 @@
 		</style>
 
 		<style name="slidervalue">
-			<resource handle="handle"/>
+			<resource background="slider_unused1" handle="handle"/>
 			<font resource="font_m" color="%text_color%"/>
 			<colors line="%fileselector_linecolor%"/>
 			<dimensions lineh="%slidervalue_lineh%" linepadding="%slidervalue_padding%" sliderw="%slidervalue_sliderw%" sliderh="%slidervalue_sliderh%"/>
@@ -5594,7 +5594,7 @@
 			</button>
 
 			<button style="main_button_half_height">
-				<condition var1="tw_recovery_folder" op="!=" var2="/TWRP"/>
+				<condition var1="tw_recovery_folder" op="!=" var2="/EKRP"/>
 				<placement x="%center_x%" y="%row10_y%"/>
 				<text>{@restore_defaults_btn=Restore Defaults}</text>
 				<actions>
@@ -5603,10 +5603,10 @@
 					<action function="set">tw_action_param=TWRP</action>
 					<action function="set">tw_text1={@confirm_action=Confirm}</action>
 					<action function="set">tw_text2={@rename_backup_confirm2=This cannot be undone!}</action>
-					<action function="set">tw_action_text1={@change_twrp_folder_on_process=Changing TWRP folder}</action>
-					<action function="set">tw_complete_text1={@change_twrp_folder_after_process=TWRP folder changed to} TWRP</action>
+					<action function="set">tw_action_text1={@change_twrp_folder_on_process=Changing EKRP folder}</action>
+					<action function="set">tw_complete_text1={@change_twrp_folder_after_process=EKRP folder changed to} EKRP</action>
 					<action function="set">tw_slider_text={@swipe_to_confirm=Swipe to Confirm}</action>
-					<action function="set">tw_filecheck=/sdcard/TWRP</action>
+					<action function="set">tw_filecheck=/sdcard/</action>
 					<action function="set">tw_existpage=changeTwrpFolder</action>
 					<action function="set">tw_notexistpage=confirm_action</action>
 					<action function="page">filecheck</action>

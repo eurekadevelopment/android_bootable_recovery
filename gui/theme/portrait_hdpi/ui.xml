@@ -54,10 +54,11 @@
 		<animation name="progress" filename="indeterminate"/>
 		<image name="progress_empty" filename="progress_empty"/>
 		<image name="progress_full" filename="progress_fill"/>
-		<image name="slider" filename="slider"/>
+		<image name="slider" filename="slider"/>   
 		<image name="slider_used" filename="slider_used"/>
+    <image name="slider_unused1" filename="slider_unused1"/>      
 		<image name="slider_touch" filename="slider_touch"/>
-		<image name="handle" filename="handle"/>
+		<image name="handle" filename="handle"/>   
 		<image name="cursor" filename="cursor" retainaspect="1"/>
 		<image name="tab_general" filename="tab_general" retainaspect="1"/>
 		<image name="tab_timezone" filename="tab_timezone" retainaspect="1"/>
@@ -127,10 +128,10 @@
 		<variable name="btn4_col2_x" value="297"/>
 		<variable name="btn4_col3_x" value="558"/>
 		<variable name="btn4_col4_x" value="819"/>
-		<variable name="row1_header_y" value="8"/>
-		<variable name="row1_header_y_clock" value="8"/>
-		<variable name="row1_header_y_cpu" value="9"/>
-		<variable name="row1_header_y_batt" value="12"/>
+		<variable name="row1_header_y" value="14"/>
+		<variable name="row1_header_y_clock" value="14"/>
+		<variable name="row1_header_y_cpu" value="15"/>
+		<variable name="row1_header_y_batt" value="18"/>
 		<variable name="row2_header_y" value="72"/>
 		<variable name="row3_header_y" value="90"/>
     <variable name="row3_header_y_main" value="120"/>
