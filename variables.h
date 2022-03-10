@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2007 The Android Open Source Project
+ * Copyright (rC) 2007 The Andoid Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,12 +20,15 @@
 #define TW_MAIN_VERSION_STR       "3.6.1_9"
 #define TW_VERSION_STR TW_MAIN_VERSION_STR TW_DEVICE_VERSION
 #define TW_SETTINGS_FILE            ".twrps"
-#define TW_RECOVERY_NAME            "TWRP"
-#define TW_DEFAULT_RECOVERY_FOLDER  "/" TW_RECOVERY_NAME
 #define TW_USE_COMPRESSION_VAR      "tw_use_compression"
 #define TW_FILENAME                 "tw_filename"
 #define TW_ZIP_INDEX                "tw_zip_index"
 #define TW_ZIP_QUEUE_COUNT       "tw_zip_queue_count"
+
+//EKRP Vars
+#define EK_VER_STR            "1.0"
+#define EK_RECOVERY_NAME    "EKRP"
+#define EK_DEFAULT_RECOVERY_FOLDER  "/" EK_RECOVERY_NAME
 
 //TWRP Vars
 #define MAX_BACKUP_NAME_LEN 64
@@ -82,7 +85,7 @@
 #define TW_RM_RF_VAR                "tw_rm_rf"
 
 #define TW_BACKUPS_FOLDER_VAR       "tw_backups_folder"
-#define TW_RECOVERY_FOLDER_VAR      "tw_recovery_folder"
+#define EK_RECOVERY_FOLDER_VAR      "tw_recovery_folder"
 
 #define TW_SDEXT_SIZE               "tw_sdext_size"
 #define TW_SWAP_SIZE                "tw_swap_size"

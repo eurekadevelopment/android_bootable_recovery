@@ -1474,7 +1474,7 @@ string TWFunc::Check_For_TwrpFolder(){
 		}
 
 		if (type == DT_DIR && Path_Exists(fullPath + '/' + TW_SETTINGS_FILE)) {
-			if ('/' + name == TW_DEFAULT_RECOVERY_FOLDER) {
+			if ('/' + name == EK_DEFAULT_RECOVERY_FOLDER) {
 				oldFolder = name;
 			} else {
 				customTWRPFolders.push_back(name);
@@ -1498,8 +1498,8 @@ string TWFunc::Check_For_TwrpFolder(){
 		}
 		string customPath =  '/' + customTWRPFolders.at(0);
 
-		if (Path_Exists(mainPath + TW_DEFAULT_RECOVERY_FOLDER)) {
-			string oldBackupFolder = mainPath + TW_DEFAULT_RECOVERY_FOLDER + "/BACKUPS/" + DataManager::GetStrValue("device_id");
+		if (Path_Exists(mainPath + EK_DEFAULT_RECOVERY_FOLDER)) {
+			string oldBackupFolder = mainPath + EK_DEFAULT_RECOVERY_FOLDER + "/BACKUPS/" + DataManager::GetStrValue("device_id");
 			string newBackupFolder = mainPath + customPath + "/BACKUPS/" + DataManager::GetStrValue("device_id");
 
 			if (Path_Exists(oldBackupFolder)) {
@@ -1528,14 +1528,14 @@ string TWFunc::Check_For_TwrpFolder(){
 					Exec_Cmd("mv -f \"" + oldBackupFolder + '/' + *it + "\" \"" + newBackupFolder + '/' + *it + (Path_Exists(newBackupFolder + '/' + *it) ? "_new\"" : "\""));
 				}
 			}
-			Exec_Cmd("rm -rf \"" + mainPath + TW_DEFAULT_RECOVERY_FOLDER + '\"');
+			Exec_Cmd("rm -rf \"" + mainPath + EK_DEFAULT_RECOVERY_FOLDER + '\"');
 		}
 
 		return customPath;
 	}
 
 exit:
-	return TW_DEFAULT_RECOVERY_FOLDER;
+	return EK_DEFAULT_RECOVERY_FOLDER;
 }
 
 string TWFunc::File_Property_Get(string File_Path, string Prop_Name)
@@ -1588,6 +1588,7 @@ void TWFunc::Welcome_Message(void)
     gui_print("-------------------------------\n");
     gui_print_color("blue", "Welcome to Eureka Recovery!\n");
     gui_print("[TWRP]: %s\n", TW_MAIN_VERSION_STR);
+	gui_print("[EKRP]: %s\n", EK_VER_STR);
 	gui_print("[Device]: %s\n", TWFunc::File_Property_Get ("/default.prop", "ro.product.device").c_str());
     gui_print_color("blue", "Eurekadevelopment:\n");
     gui_print("[Website]: https://eurekadevelopment.github.io\n");

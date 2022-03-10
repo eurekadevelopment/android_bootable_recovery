@@ -578,7 +578,7 @@ void DataManager::SetDefaultValues()
 	mConst.SetValue("false", "0");
 
 	mConst.SetValue(TW_VERSION_VAR, TW_VERSION_STR);
-   mData.SetValue("ek_torch_on", "0");
+  mData.SetValue("ek_torch_on", "0");
 
 #ifndef TW_NO_HAPTICS
 	mPersist.SetValue("tw_button_vibrate", "80");
@@ -614,11 +614,11 @@ void DataManager::SetDefaultValues()
 	mConst.SetValue(TW_SHOW_DUMLOCK, "0");
 #endif
 
-	mData.SetValue(TW_RECOVERY_FOLDER_VAR, TW_DEFAULT_RECOVERY_FOLDER);
+	mData.SetValue(EK_RECOVERY_FOLDER_VAR, EK_DEFAULT_RECOVERY_FOLDER);
 
 	str = GetCurrentStoragePath();
 	mPersist.SetValue(TW_ZIP_LOCATION_VAR, str);
-	str += DataManager::GetStrValue(TW_RECOVERY_FOLDER_VAR) + "/BACKUPS/";
+	str += DataManager::GetStrValue(EK_RECOVERY_FOLDER_VAR) + "/BACKUPS/";
 
 	string dev_id;
 	mConst.GetValue("device_id", dev_id);
@@ -738,7 +738,6 @@ void DataManager::SetDefaultValues()
 #endif
 	mConst.SetValue(TW_MIN_SYSTEM_VAR, TW_MIN_SYSTEM_SIZE);
 	mData.SetValue(TW_BACKUP_NAME, "(Auto Generate)");
-
 	mPersist.SetValue(TW_INSTALL_REBOOT_VAR, "0");
 	mPersist.SetValue(TW_SIGNED_ZIP_VERIFY_VAR, "0");
 	mPersist.SetValue(TW_DISABLE_FREE_SPACE_VAR, "0");
@@ -756,8 +755,7 @@ void DataManager::SetDefaultValues()
 	mPersist.SetValue(TW_TIME_ZONE_GUISEL, "CST6;CDT,M3.2.0,M11.1.0");
 	mPersist.SetValue(TW_TIME_ZONE_GUIOFFSET, "0");
 	mPersist.SetValue(TW_TIME_ZONE_GUIDST, "1");
-        mPersist.SetValue(TW_AUTO_REFLASHTWRP_VAR, "0");
-
+  mPersist.SetValue(TW_AUTO_REFLASHTWRP_VAR, "0");
 	mData.SetValue(TW_ACTION_BUSY, "0");
 	mData.SetValue("tw_wipe_cache", "0");
 	mData.SetValue("tw_wipe_dalvik", "0");
@@ -1121,7 +1119,7 @@ void DataManager::ReadSettingsFile(void)
 
 	memset(mkdir_path, 0, sizeof(mkdir_path));
 	memset(settings_file, 0, sizeof(settings_file));
-	sprintf(mkdir_path, "%s%s", GetSettingsStoragePath().c_str(), GetStrValue(TW_RECOVERY_FOLDER_VAR).c_str());
+	sprintf(mkdir_path, "%s%s", GetSettingsStoragePath().c_str(), GetStrValue(EK_RECOVERY_FOLDER_VAR).c_str());
 	sprintf(settings_file, "%s/%s", mkdir_path, TW_SETTINGS_FILE);
 
 	if (!PartitionManager.Mount_Settings_Storage(false))
@@ -1167,6 +1165,6 @@ void DataManager::Vibrate(const string& varName)
 void DataManager::LoadTWRPFolderInfo(void)
 {
 	string mainPath = GetCurrentStoragePath();
-	SetValue(TW_RECOVERY_FOLDER_VAR, TWFunc::Check_For_TwrpFolder());
-	mBackingFile = mainPath + GetStrValue(TW_RECOVERY_FOLDER_VAR) + '/' + TW_SETTINGS_FILE;
+	SetValue(EK_RECOVERY_FOLDER_VAR, TWFunc::Check_For_TwrpFolder());
+	mBackingFile = mainPath + GetStrValue(EK_RECOVERY_FOLDER_VAR) + '/' + TW_SETTINGS_FILE;
 }
