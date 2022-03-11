@@ -358,7 +358,6 @@
 		<string name="settings_screen_hdr">Screen</string>
 		<string name="settings_screen_timeout_hdr">Screen Timeout</string>
 		<string name="enable_timeout_chk">Enable screen timeout</string>
-		<string name="screen_to_slider">Screen timeout in seconds:</string>
 		<string name="screen_to_slider_s">Screen timeout in seconds (0=disabled): %tw_screen_timeout_secs%</string>
 		<string name="screen_to_na">Screen timeout setting unavailable</string>
 		<string name="screen_bright_slider">Brightness: %tw_brightness_pct%%</string>
@@ -367,9 +366,6 @@
 		<string name="button_vibration_hdr">Button Vibration</string>
 		<string name="kb_vibration_hdr">Keyboard Vibration</string>
 		<string name="act_vibration_hdr">Action Vibration</string>
-		<string name="button_vibration">Button Vibration:</string>
-		<string name="kb_vibration">Keyboard Vibration:</string>
-		<string name="act_vibration">Action Vibration:</string>
 		<string name="select_language">Select Language:</string>
 		<string name="sel_lang_btn">Select Language</string>
 		<string name="set_language_btn">Set Language</string>
@@ -780,5 +776,9 @@
 		<string name="rename_stock">Renamed stock recovery file in /system to prevent the stock ROM from replacing EKRP.</string>
 		<string name="config_twrp">Configuring EKRP...</string>
 		<string name="config_twrp_err">Unable to configure EKRP with this kernel.</string>
+		<string name="kb_vibration">Keyboard Vibration: %tw_keyboard_vibrate%</string>
+		<string name="act_vibration">Action Vibration: %tw_action_vibrate%</string>
+		<string name="button_vibration">Button Vibration: %tw_button_vibrate%</string>
+		<string name="screen_to_slider">Screen timeout in seconds: %tw_screen_timeout_secs%</string>
 	</resources>
 </language>

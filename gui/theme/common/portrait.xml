@@ -3592,15 +3592,15 @@
 				<condition var1="tw_screen_timeout_secs" op="!=" var2="0"/>
 				<condition var1="tw_no_screen_timeout" op="!=" var2="1"/>
 				<placement x="indent" y="%row5_y%" w="%content_width%"/>
-				<text>{@screen_to_slider=Screen timeout in seconds:}</text>
-				<data variable="tw_screen_timeout_secs" min="15" max="300"/>
+				<text>{@screen_to_slider=Screen timeout in seconds: %tw_screen_timeout_secs%}</text>
+				<data variable="tw_screen_timeout_secs" min="15" max="300" showrange="0" showcurr="0" changeondrag="1"/>
 			</slidervalue>
 
 			<slidervalue>
 				<condition var1="tw_has_brightnesss_file" var2="1"/>
 				<placement x="indent" y="%row10_y%" w="%content_width%"/>
 				<text>{@screen_bright_slider=Brightness: %tw_brightness_pct%%}</text>
-				<data variable="tw_brightness_pct" min="10" max="100"/>
+				<data variable="tw_brightness_pct" min="10" max="100" showrange="0" showcurr="0" changeondrag="1"/>
 				<actions>
 					<action function="set">tw_brightness=%tw_brightness_max%</action>
 					<action function="compute">tw_brightness*%tw_brightness_pct%</action>
@@ -3648,22 +3648,22 @@
 			<slidervalue>
 				<condition var1="tw_disable_haptics" var2="0"/>
 				<placement x="indent" y="%row4_y%" w="%content_width%"/>
-				<text>{@button_vibration=Button Vibration:}</text>
-				<data variable="tw_button_vibrate" min="0" max="300"/>
+				<text>{@button_vibration=Button Vibration: %tw_button_vibrate%}</text>
+				<data variable="tw_button_vibrate" min="0" max="300" showrange="0" showcurr="0" changeondrag="1"/>
 			</slidervalue>
 
 			<slidervalue>
 				<condition var1="tw_disable_haptics" var2="0"/>
 				<placement x="indent" y="%row9_y%" w="%content_width%"/>
-				<text>{@kb_vibration=Keyboard Vibration:}</text>
-				<data variable="tw_keyboard_vibrate" min="0" max="300"/>
+				<text>{@kb_vibration=Keyboard Vibration: %tw_keyboard_vibrate%}</text>
+				<data variable="tw_keyboard_vibrate" min="0" max="300" showrange="0" showcurr="0" changeondrag="1"/>
 			</slidervalue>
 
 			<slidervalue>
 				<condition var1="tw_disable_haptics" var2="0"/>
 				<placement x="indent" y="%row14_y%" w="%content_width%"/>
-				<text>{@act_vibration=Action Vibration:}</text>
-				<data variable="tw_action_vibrate" min="0" max="500"/>
+				<text>{@act_vibration=Action Vibration: %tw_action_vibrate%}</text>
+				<data variable="tw_action_vibrate" min="0" max="500" showrange="0" showcurr="0" changeondrag="1"/>
 			</slidervalue>
 
 			<action>
@@ -5392,6 +5392,19 @@
 				<placement x="0" y="%navbar_y%" w="%screen_width%" h="%navbar_height%"/>
 				<action function="overlay"/>
 			</button>
+			
+			<slidervalue>
+				<condition var1="tw_has_brightnesss_file" var2="1"/>
+				<placement x="indent" y="%row22_y%" w="%content_width%"/>
+				<text>{@screen_bright_slider=Brightness: %tw_brightness_pct%%}</text>
+				<data variable="tw_brightness_pct" min="10" max="100" showrange="0" showcurr="0" changeondrag="1"/>
+				<actions>
+					<action function="set">tw_brightness=%tw_brightness_max%</action>
+					<action function="compute">tw_brightness*%tw_brightness_pct%</action>
+					<action function="compute">tw_brightness/100</action>
+					<action function="setbrightness">%tw_brightness%</action>
+				</actions>
+			</slidervalue>
 
 			<action>
 				<touch key="power"/>

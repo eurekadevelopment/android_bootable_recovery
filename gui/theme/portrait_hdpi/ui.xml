@@ -132,7 +132,7 @@
 		<variable name="row1_header_y" value="14"/>
 		<variable name="row1_header_y_clock" value="14"/>
 		<variable name="row1_header_y_cpu" value="15"/>
-		<variable name="row1_header_y_batt" value="18"/>
+		<variable name="row1_header_y_batt" value="19"/>
 		<variable name="row2_header_y" value="72"/>
 		<variable name="row3_header_y" value="90"/>
     	<variable name="row3_header_y_main" value="120"/>
@@ -240,7 +240,7 @@
 		<variable name="slidervalue_padding" value="0"/>
 		<variable name="slidervalue_sliderw" value="72"/>
 		<variable name="slidervalue_sliderh" value="108"/>
-		<variable name="slideout_height" value="1686"/>
+		<variable name="slideout_height" value="1486"/>
 		<variable name="slideout_bg_height" value="1720"/>
 		<variable name="input_height" value="64"/>
 		<variable name="input_line_width" value="3"/>
