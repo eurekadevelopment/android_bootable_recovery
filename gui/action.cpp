@@ -2331,7 +2331,7 @@ int GUIAction::applycustomtwrpfolder(string arg __unused)
 	string storageFolder = DataManager::GetSettingsStoragePath();
 	string newFolder = storageFolder + '/' + arg;
 	string newBackupFolder = newFolder + "/BACKUPS/" + DataManager::GetStrValue("device_id");
-	string prevFolder = storageFolder + DataManager::GetStrValue(TW_RECOVERY_FOLDER_VAR);
+	string prevFolder = storageFolder + DataManager::GetStrValue(EK_RECOVERY_FOLDER_VAR);
 	bool ret = false;
 
 	if (TWFunc::Path_Exists(newFolder)) {
@@ -2350,7 +2350,7 @@ int GUIAction::applycustomtwrpfolder(string arg __unused)
 
 
 	if (ret) {
-		DataManager::SetValue(TW_RECOVERY_FOLDER_VAR, '/' + arg);
+		DataManager::SetValue(EK_RECOVERY_FOLDER_VAR, '/' + arg);
 		DataManager::SetValue(TW_BACKUPS_FOLDER_VAR, newBackupFolder);
 		DataManager::mBackingFile = newFolder + '/' + TW_SETTINGS_FILE;
 	}

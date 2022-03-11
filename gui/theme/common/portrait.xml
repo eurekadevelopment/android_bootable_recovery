@@ -860,7 +860,7 @@
 				<touch key="back"/>
 				<actions>
 					<action function="set">tw_clear_destination=%tw_back%</action>
-					<action function="page">clear_vars</action>
+					<action function="page">main</action>
 				</actions>
 			</action>
 
@@ -1009,7 +1009,7 @@
 				<touch key="back"/>
 				<actions>
 					<action function="set">tw_clear_destination=%tw_back%</action>
-					<action function="page">clear_vars</action>
+					<action function="page">main</action>
 				</actions>
 			</action>
 		</page>
@@ -3100,7 +3100,7 @@
 				<text>{@magisk_btn=Install Magisk}</text>
 				<actions>
 					<action function="set">tw_back=tools</action>
-					<action function="set">tw_filename=/sdcard/EKRP/addons/magisk.zip</action>
+					<action function="set">tw_filename=/sdcard/addons/magisk.zip</action>
 					<action function="set">tw_action=queuezip</action>
 					<action function="set">_install_built_in_zip=1</action>
 					<action function="set">tw_has_action2=1</action>
@@ -3118,7 +3118,7 @@
 				<text>{@unmagisk_btn=Uninstall Magisk}</text>
 				<actions>
 					<action function="set">tw_back=tools</action>
-					<action function="set">tw_filename=/sdcard/EKRP/addons/magiskuninstaller.zip</action>
+					<action function="set">tw_filename=/sdcard/addons/magiskuninstaller.zip</action>
 					<action function="set">tw_action=queuezip</action>
 					<action function="set">tw_has_action2=1</action>
 					<action function="set">tw_action2=flash</action>
@@ -3135,7 +3135,7 @@
 				<text>{@dmverity_btn=DM-Verity}</text>
 				<actions>
 					<action function="set">tw_back=tools</action>
-					<action function="set">tw_filename=/sdcard/EKRP/addons/dmverity.zip</action>
+					<action function="set">tw_filename=/sdcard/addons/dmverity.zip</action>
 					<action function="set">tw_action=queuezip</action>
 					<action function="set">tw_has_action2=1</action>
 					<action function="set">tw_action2=flash</action>
@@ -3158,11 +3158,9 @@
 				<action function="page">main</action>
 			</action>
 
-		<action>
+			<action>
 				<touch key="back"/>
-				<actions>
-					<action function="page">tools</action>
-				</actions>
+				<action function="page">main</action>
 			</action>
 		</page>
 
