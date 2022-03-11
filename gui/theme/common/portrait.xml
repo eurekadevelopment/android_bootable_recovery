@@ -1099,12 +1099,12 @@
 			</text>
 
 			<text style="text_m">
-				<placement x="%center_x%" y="%row7_y%" placement="5"/>
+				<placement x="%center_x%" y="%row8_y%" placement="5"/>
 				<text>{@factory_reset3=Most of the time this is}</text>
 			</text>
 
 			<text style="text_m">
-				<placement x="%center_x%" y="%row8_y%" placement="5"/>
+				<placement x="%center_x%" y="%row7_y%" placement="5"/>
 				<text>{@factory_reset4=the only wipe that you need.}</text>
 			</text>
 
