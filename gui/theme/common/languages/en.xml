@@ -734,14 +734,14 @@
 		<string name="magisk_btn">Install Magisk</string>
 		<string name="unmagisk_btn">Uninstall Magisk</string>
 		<string name="dmverity_btn">DM-Verity</string>
-		<string name="reboot_btn">Powermenu</string>
+		<string name="reboot_btn">Power</string>
 		<string name="tools_btn">Tools</string>
     	<string name="flash_btn">Flashlight</string>
     	<string name="about_btn">About</string>
 		<string name="about_ekrp">Eureka Recovery Project</string>
     	<string name="about_base">Based on TWRP</string>
     	<string name="about_devices">Supported Devices: A10/A20/A20e/A30/A40</string>
-		<string name="reboot_hdr">Powermenu</string>
+		<string name="reboot_hdr">Power</string>
 		<string name="about_hdr">About</string>
 		<string name="tools_hdr">Tools</string>
 		<string name="reboot_install_app_hdr">Install EKRP App</string>

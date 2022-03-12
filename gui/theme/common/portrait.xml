@@ -269,7 +269,7 @@
 
 			<button style="main_button">
 				<placement x="%center_x%" y="%row19_y%"/>
-				<text>{@reboot_btn=Powermenu}</text>
+				<text>{@reboot_btn=Power}</text>
 				<action function="page">reboot</action>
 			</button>
 
@@ -2930,7 +2930,7 @@
 
 			<text style="text_l">
 				<placement x="%center_x_power%" y="%row3_header_y_power%"/>
-				<text>{@reboot_hdr=Powermenu}</text>
+				<text>{@reboot_hdr=Power}</text>
 			</text>
 
 			<button style="main_button_poweroff">
