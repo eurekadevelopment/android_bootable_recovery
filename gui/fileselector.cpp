@@ -47,7 +47,7 @@ GUIFileSelector::GUIFileSelector(xml_node<>* node) : GUIScrollList(node)
 	xml_attribute<>* attr;
 	xml_node<>* child;
 
-	mFolderIcon = mFileIcon = NULL;
+	mFolderIcon = mFileIcon = mZipIcon = mImgIcon = NULL;
 	mShowFolders = mShowFiles = mShowNavFolders = 1;
 	mUpdate = 0;
 	mPathVar = "cwd";
@@ -125,6 +125,8 @@ GUIFileSelector::GUIFileSelector(xml_node<>* node) : GUIScrollList(node)
 	if (child) {
 		mFolderIcon = LoadAttrImage(child, "folder");
 		mFileIcon = LoadAttrImage(child, "file");
+		mZipIcon = LoadAttrImage(child, "zip");
+		mImgIcon = LoadAttrImage(child, "img");
 	}
 	int iconWidth = 0, iconHeight = 0;
 	if (mFolderIcon && mFolderIcon->GetResource() && mFileIcon && mFileIcon->GetResource()) {
@@ -391,6 +393,16 @@ void GUIFileSelector::RenderItem(size_t itemindex, int yPos, bool selected)
 	} else {
 		text = mFileList.at(itemindex - folderSize).fileName;
 		icon = mFileIcon;
+
+	if (text.length() >= 4) {
+		string ext = text.substr(text.length() - 4);
+		if (ext == ".zip" || ext == ".ZIP") icon = mZipIcon;
+		if (ext == ".img" || ext == ".IMG") icon = mImgIcon;
+    }
+    if (text.length() >= 5) {
+		string ext = text.substr(text.length() - 5);
+		if (ext == ".ozip" || ext == ".OZIP") icon = mZipIcon;
+    }
 	}
 
 	RenderStdItem(yPos, selected, icon, text.c_str());
