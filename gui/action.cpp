@@ -168,6 +168,7 @@ GUIAction::GUIAction(xml_node<>* node)
 		ADD_ACTION(reload);
 		ADD_ACTION(readBackup);
 		ADD_ACTION(set);
+		ADD_ACTION(exten);
 		ADD_ACTION(clear);
 		ADD_ACTION(mount);
 		ADD_ACTION(unmount);
@@ -610,6 +611,16 @@ int GUIAction::set(std::string arg)
 	else
 		DataManager::SetValue(arg, "1");
 	return 0;
+}
+
+int GUIAction::exten(std::string arg) {
+  if (arg.length() != string::npos) {
+    string extn = arg.substr(arg.find_last_of(".") + 1);
+    string mpExtn = "ek_file_extn";
+    DataManager::SetValue(mpExtn, extn);
+  } else
+    LOGERR("Exten: Null argument \n");
+  return 0;
 }
 
 int GUIAction::clear(std::string arg)
