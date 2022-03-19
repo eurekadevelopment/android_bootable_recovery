@@ -33,7 +33,6 @@
 		<string name="autostorage">Storage</string>
 
 		<!-- GUI XML strings -->
-		<string name="twrp_header">Eureka Recovery Project</string>
     	<string name="twrp_ver">[TWRP]&#032;</string>
 		<string name="twrp_watch_header">%tw_version%</string>
 		<string name="cpu_temp">%tw_cpu_temp% &#xB0;C</string>
@@ -299,7 +298,6 @@
 		<string name="swipe_allow_mod">Swipe to Allow Modifications</string>
 		<string name="swipe_allow_mod_s">Allow Modifications</string>
 		<string name="settings_hdr">Settings</string>
-		<string name="settings_gen_hdr">General</string>
 		<string name="settings_gen_s_hdr">General</string>
 		<string name="settings_gen_btn">General</string>
 		<string name="use_rmrf_chk">Use rm -rf instead of formatting</string>
@@ -317,7 +315,6 @@
 		<string name="vibration_disabled">Vibration is disabled for this device</string>
 		<string name="settings_vibration_btn">Vibration</string>
 		<string name="settings_language_btn">Language</string>
-		<string name="time_zone_hdr">Time Zone</string>
 		<string name="sel_tz_list">Select Time Zone:</string>
 		<!-- Translator note: if it does not make sense to translate the locations or if it makes more sense,
 				feel free to change the location listed or drop the location entirely and just call it UTC -6 -->
@@ -355,14 +352,12 @@
 		<string name="curr_tz">Current Time Zone: %tw_time_zone%</string>
 		<string name="curr_tz_s">Current Time Zone:</string>
 		<string name="set_tz_btn">Set Time Zone</string>
-		<string name="settings_screen_hdr">Screen</string>
 		<string name="settings_screen_timeout_hdr">Screen Timeout</string>
 		<string name="enable_timeout_chk">Enable screen timeout</string>
 		<string name="screen_to_slider_s">Screen timeout in seconds (0=disabled): %tw_screen_timeout_secs%</string>
 		<string name="screen_to_na">Screen timeout setting unavailable</string>
 		<string name="screen_bright_slider">Brightness: %tw_brightness_pct%%</string>
 		<string name="screen_bright_na">Brightness setting unavailable</string>
-		<string name="vibration_hdr">Vibration</string>
 		<string name="button_vibration_hdr">Button Vibration</string>
 		<string name="kb_vibration_hdr">Keyboard Vibration</string>
 		<string name="act_vibration_hdr">Action Vibration</string>
@@ -377,7 +372,6 @@
 		<string name="part_sd_btn">Partition SD card</string>
 		<string name="part_sd_s_btn">SD card</string>
 		<string name="file_manager_btn">File Manager</string>
-		<string name="language_hdr">Language</string>
 		<string name="terminal_btn">Terminal</string>
 		<string name="reload_theme_btn">Reload Theme</string>
 		<string name="dumlock_btn">HTC Dumlock</string>
@@ -780,5 +774,12 @@
 		<string name="act_vibration">Action Vibration: %tw_action_vibrate%</string>
 		<string name="button_vibration">Button Vibration: %tw_button_vibrate%</string>
 		<string name="screen_to_slider">Screen timeout in seconds: %tw_screen_timeout_secs%</string>
+		<string name="twrp_header">Eureka Recovery Project</string>
+		<string name="state">Updating... please wait!</string>
+		<string name="settings_gen_hdr">Settings | General</string>
+		<string name="settings_tzone_hdr">Settings | Time Zone</string>
+		<string name="settings_screen_hdr">Settings | Screen</string>
+		<string name="settings_vibration_hdr">Settings | Vibration</string>
+		<string name="settings_lang_hdr">Settings | Language</string>
 	</resources>
 </language>

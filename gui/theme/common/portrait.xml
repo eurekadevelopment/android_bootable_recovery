@@ -22,7 +22,6 @@
 		</style>
 
 		<style name="input">
-			<background color="%background_color%"/>
 			<cursor color="%accent_color%" hasfocus="1" width="%input_line_width%"/>
 			<font resource="font_m" color="%text_color%"/>
 		</style>
@@ -99,7 +98,6 @@
 		</style>
 
 		<style name="console">
-			<fastscroll rectcolor="%fastscroll_color%" w="%fastscroll_w%" rectw="%fastscroll_rectw%" recth="%fastscroll_recth%"/>
 			<color foreground="%text_color%" background="%background_color%" scroll="%background_color%"/>
 			<font resource="fixed"/>
 		</style>
@@ -113,8 +111,7 @@
 		<style name="fileselector">
 			<highlight color="%fileselector_highlight_color%"/>
 			<header background="%background_color%" textcolor="%text_color%" separatorcolor="%accent_color%" separatorheight="%fileselector_separatorheight%"/>
-			<fastscroll linecolor="%transparent%" rectcolor="%fastscroll_color%" w="%fastscroll_w%" linew="%fastscroll_linew%" rectw="%fastscroll_rectw%" recth="%fastscroll_recth%"/>
-			<separator color="%fileselector_seperator%" height="%fileselector_separatorheight%"/>
+			<separator height="%fileselector_separatorheight%"/>
 			<sort name="tw_gui_sort_order"/>
 			<icon folder="folder" file="file"/>
 			<background color="%background_color%"/>
@@ -124,8 +121,7 @@
 		<style name="listbox">
 			<highlight color="%fileselector_highlight_color%"/>
 			<header background="%background_color%" textcolor="%text_color%" separatorcolor="%accent_color%" separatorheight="%fileselector_separatorheight%"/>
-			<fastscroll linecolor="%transparent%" rectcolor="%fastscroll_color%" w="%fastscroll_w%" linew="%fastscroll_linew%" rectw="%fastscroll_rectw%" recth="%fastscroll_recth%"/>
-			<separator color="%fileselector_seperator%" height="%fileselector_separatorheight%"/>
+			<separator height="%fileselector_separatorheight%"/>
 			<icon selected="radio_true" unselected="radio_false"/>
 			<background color="%background_color%"/>
 			<font resource="font_m" spacing="%fileselector_spacing%" color="%text_color%" highlightcolor="%highlight_color2%"/>
@@ -134,16 +130,14 @@
 		<style name="scrolllist">
 			<background color="%background_color%"/>
 			<font resource="font_m" spacing="%fileselector_spacing%" color="%text_color%"/>
-			<fastscroll linecolor="%fileselector_linecolor%" rectcolor="%fastscroll_color%" w="%fastscroll_w%" linew="%fastscroll_linew%" rectw="%fastscroll_rectw%" recth="%fastscroll_recth%"/>
 		</style>
 
 		<style name="partitionlist">
 			<highlight color="%fileselector_highlight_color%"/>
 			<header background="%background_color%" textcolor="%text_color%" separatorcolor="%accent_color%" separatorheight="%fileselector_separatorheight%"/>
-			<fastscroll linecolor="%transparent%" rectcolor="%fastscroll_color%" w="%fastscroll_w%" linew="%fastscroll_linew%" rectw="%fastscroll_rectw%" recth="%fastscroll_recth%"/>
 			<dimensions lineh="%slidervalue_lineh%" linepadding="%slidervalue_padding%" sliderw="%slidervalue_sliderw%" sliderh="%slidervalue_sliderh%"/>
 			<icon selected="checkbox_true" unselected="checkbox_false"/>
-			<separator color="%fileselector_seperator%" height="%fileselector_separatorheight%"/>
+			<separator height="%fileselector_separatorheight%"/>
 			<background color="%background_color%"/>
 			<font resource="font_m" spacing="%partitionlist_spacing%" color="%text_color%" highlightcolor="%fileselector_highlight_font_color%"/>
 		</style>
@@ -152,18 +146,16 @@
 			<highlight color="%fileselector_highlight_color%"/>
 			<placement x="%col1_x_left%" y="%row5_y%" w="%content_overlay_width%" h="%partitionlist_storage_height%"/>
 			<header background="%background_color%" textcolor="%text_color%" separatorcolor="%accent_color%" separatorheight="%fileselector_separatorheight%"/>
-			<fastscroll linecolor="%transparent%" rectcolor="%fastscroll_color%" w="%fastscroll_w%" linew="%fastscroll_linew%" rectw="%fastscroll_rectw%" recth="%fastscroll_recth%"/>
 			<dimensions lineh="%slidervalue_lineh%" linepadding="%slidervalue_padding%" sliderw="%slidervalue_sliderw%" sliderh="%slidervalue_sliderh%"/>
 			<icon selected="radio_true" unselected="radio_false"/>
-			<separator color="%fileselector_seperatorr%" height="%fileselector_separatorheight%"/>
+			<separator height="%fileselector_separatorheight%"/>
 			<background color="%background_color%"/>
 			<font resource="font_m" spacing="%partitionlist_spacing%" color="%text_color%" highlightcolor="%fileselector_highlight_font_color%"/>
 		</style>
 
 		<style name="advanced_listbox">
 			<highlight color="%fileselector_highlight_color%"/>
-			<fastscroll linecolor="%transparent%" rectcolor="%fastscroll_color%" w="%fastscroll_w%" linew="%fastscroll_linew%" rectw="%fastscroll_rectw%" recth="%fastscroll_recth%"/>
-			<separator color="%fileselector_seperator%" height="%fileselector_separatorheight%"/>
+			<separator height="%fileselector_separatorheight%"/>
 			<dimensions lineh="%slidervalue_lineh%" linepadding="%slidervalue_padding%" sliderw="%slidervalue_sliderw%" sliderh="%slidervalue_sliderh%"/>
 			<icon selected="handle" unselected="handle"/>
 			<background color="%background_color%"/>
@@ -172,8 +164,7 @@
 
 		<style name="options_listbox">
 			<highlight color="%fileselector_highlight_color%"/>
-			<fastscroll linecolor="%%" rectcolor="%fastscroll_color%" w="%fastscroll_w%" linew="%fastscroll_linew%" rectw="%fastscroll_rectw%" recth="%fastscroll_recth%"/>
-			<separator color="%background_color%" height="%fileselector_separatorheight%"/>
+			<separator height="%fileselector_separatorheight%"/>
 			<dimensions lineh="%slidervalue_lineh%" linepadding="%slidervalue_padding%" sliderw="%slidervalue_sliderw%" sliderh="%slidervalue_sliderh%"/>
 			<background color="%background_color%"/>
 			<font resource="font_m" spacing="%fileselector_spacing%" color="%text_color%" highlightcolor="%highlight_color2%"/>
@@ -310,9 +301,9 @@
 
 			<fileselector>
 				<condition var1="tw_selectimage" var2="0"/>
-				<placement x="%indent%" y="%row3_y%" w="%content_width%" h="%fileselector_install_height%"/>
+				<placement x="col1_x_left" y="%row3_y%" w="%content_width%" h="%fileselector_install_height%"/>
 				<text>%tw_zip_location%</text>
-				<filter extn=".zip;.ozip;.ZIP;.OZIP" folders="1" files="1"/>
+				<filter extn=".zip;.ozip;.ZIP;.OZIP;.img" folders="1" files="1"/>
 				<prfxfilter prfx="Magisk-;Magisk.apk;app-release.apk;app-debug.apk" folders="1" files="1"/>
 				<path name="tw_zip_location" default="/sdcard"/>
 				<data name="tw_filename"/>
@@ -321,7 +312,7 @@
 
 			<fileselector>
 				<condition var1="tw_selectimage" var2="1"/>
-				<placement x="%indent%" y="%row3_y%" w="%content_width%" h="%fileselector_install_height%"/>
+				<placement x="col1_x_left" y="%row3_y%" w="%content_width%" h="%fileselector_install_height%"/>
 				<text>%tw_zip_location%</text>
 				<filter extn=".img" folders="1" files="1"/>
 				<path name="tw_zip_location" default="/sdcard"/>
@@ -512,6 +503,11 @@
 			</text>
 
 			<template name="console"/>
+
+			<text style="text_m_accent">
+				<placement x="320" y="%row23a_y%"/>
+				<text>{@state=Updating... please wait!}</text>
+			</text>
 
 			<template name="progress_bar"/>
 
@@ -1191,7 +1187,7 @@
 			</text>
 
 			<partitionlist>
-				<placement x="%indent%" y="%row1a_y%" w="%content_width%" h="%partitionlist_wipe_height%"/>
+				<placement x="%col1_x_left%" y="%row1a_y%" w="%content_width%" h="%partitionlist_wipe_height%"/>
 				<text>{@sel_part_wipe=Select Partitions to Wipe:}</text>
 				<data name="tw_wipe_list"/>
 				<listtype name="wipe"/>
@@ -1368,45 +1364,45 @@
 
 			<text style="text_m">
 				<condition var1="tw_partition_is_present" var2="1"/>
-				<placement x="%indent%" y="%row5_y%"/>
+				<placement x="%col1_x_left%" y="%row5_y%"/>
 				<text>{@part_present_yes=Present: Yes}</text>
 			</text>
 
 			<text style="text_m">
 				<condition var1="tw_partition_is_present" var2="0"/>
-				<placement x="%indent%" y="%row5_y%"/>
+				<placement x="%col1_x_left%" y="%row5_y%"/>
 				<text>{@part_present_no=Present: No}</text>
 			</text>
 
 			<text style="text_m">
 				<condition var1="tw_partition_removable" var2="1"/>
-				<placement x="%center_x%" y="%row5_y%"/>
+				<placement x="%center_x_part%" y="%row5_y%"/>
 				<text>{@part_removable_yes=Removable: Yes}</text>
 			</text>
 
 			<text style="text_m">
 				<condition var1="tw_partition_removable" var2="0"/>
-				<placement x="%center_x%" y="%row5_y%"/>
+				<placement x="%center_x_part%" y="%row5_y%"/>
 				<text>{@part_removable_no=Removable: No}</text>
 			</text>
 
 			<text style="text_m">
-				<placement x="%indent%" y="%row7_y%"/>
+				<placement x="%col1_x_left%" y="%row7_y%"/>
 				<text>{@part_size=Size: %tw_partition_size%MB}</text>
 			</text>
 
 			<text style="text_m">
-				<placement x="%center_x%" y="%row7_y%"/>
+				<placement x="%center_x_part%" y="%row7_y%"/>
 				<text>{@part_used=Used: %tw_partition_used%MB}</text>
 			</text>
 
 			<text style="text_m">
-				<placement x="%indent%" y="%row9_y%"/>
+				<placement x="%col1_x_left%" y="%row9_y%"/>
 				<text>{@part_free=Free: %tw_partition_free%MB}</text>
 			</text>
 
 			<text style="text_m">
-				<placement x="%center_x%" y="%row9_y%"/>
+				<placement x="%center_x_part%" y="%row9_y%"/>
 				<text>{@part_backup_size=Backup Size: %tw_partition_backup_size%MB}</text>
 			</text>
 
@@ -1670,7 +1666,7 @@
 
 			<template name="tabs_backup"/>
 
-			<fill color="%text_color%">
+			<fill color="%tab_color%">
 				<placement x="0" y="%row_tab_y%" w="%tab3_width%" h="%tab_indicator_height%"/>
 			</fill>
 
@@ -1705,17 +1701,17 @@
 			</button>
 
 			<text style="text_m_accent">
-				<placement x="%indent%" y="%row3a_y%"/>
+				<placement x="%col1_x_left%" y="%row3a_y%"/>
 				<text>{@name=Name:}</text>
 			</text>
 
 			<text style="text_m">
-				<placement x="%indent%" y="%row4a_y%"/>
+				<placement x="%col1_x_left%" y="%row4a_y%"/>
 				<text>%tw_backup_name%</text>
 			</text>
 
 			<fill color="%fileselector_linecolor%">
-				<placement x="%indent%" y="row5a_y" w="%content_width%" h="input_line_width"/>
+				<placement x="%col1_x_left%" y="row5a_y" w="%content_width%" h="input_line_width"/>
 			</fill>
 
 			<button>
@@ -1729,7 +1725,7 @@
 			</button>
 
 			<partitionlist>
-				<placement x="%indent%" y="%row6_y%" w="%content_width%" h="%partitionlist_backup_height%"/>
+				<placement x="%col1_x_left%" y="%row6_y%" w="%content_width%" h="%partitionlist_backup_height%"/>
 				<text>{@sel_part_backup=Select Partitions to Backup:}</text>
 				<data name="tw_backup_list"/>
 				<listtype name="backup"/>
@@ -1828,7 +1824,7 @@
 
 			<template name="tabs_backup"/>
 
-			<fill color="%text_color%">
+			<fill color="%tab_color%">
 				<placement x="%tab3_col2_x%" y="%row_tab_y%" w="%tab3_width%" h="%tab_indicator_height%"/>
 			</fill>
 
@@ -1863,19 +1859,19 @@
 			</button>
 
 			<checkbox>
-				<placement x="%indent%" y="%row3a_y%"/>
+				<placement x="%col1_x_left%" y="%row3a_y%"/>
 				<text>{@enable_backup_comp_chk=Enable compression}</text>
 				<data variable="tw_use_compression"/>
 			</checkbox>
 
 			<checkbox>
-				<placement x="%indent%" y="%row5_y%"/>
+				<placement x="%col1_x_left%" y="%row5_y%"/>
 				<text>{@skip_digest_backup_chk=Skip Digest generation during backup}</text>
 				<data variable="tw_skip_digest_generate"/>
 			</checkbox>
 
 			<checkbox>
-				<placement x="%indent%" y="%row6a_y%"/>
+				<placement x="%col1_x_left%" y="%row6a_y%"/>
 				<text>{@disable_backup_space_chk=Disable free space check before backup}</text>
 				<data variable="tw_disable_free_space"/>
 			</checkbox>
@@ -1888,7 +1884,7 @@
 
 			<button style="main_button">
 				<condition var1="tw_has_boot_slots" var2="1"/>
-				<placement x="%indent%" y="%row19_y%"/>
+				<placement x="%col1_x_left%" y="%row19_y%"/>
 				<text>{@boot_slot_a=Slot A}</text>
 				<actions>
 					<action function="set">tw_back=backup_options</action>
@@ -1955,7 +1951,7 @@
 
 			<template name="tabs_backup"/>
 
-			<fill color="%text_color%">
+			<fill color="%tab_color%">
 				<placement x="0" y="%row_tab_y%" w="%tab3_width%" h="%tab_indicator_height%"/>
 			</fill>
 
@@ -2101,7 +2097,7 @@
 				</actions>
 			</button>
 
-			<fill color="%text_color%">
+			<fill color="%tab_color%">
 				<placement x="%tab3_col3_x%" y="%row_tab_y%" w="%tab3_width%" h="%tab_indicator_height%"/>
 			</fill>
 
@@ -2116,7 +2112,7 @@
 			</text>
 
 			<input>
-				<placement x="%indent%" y="%row7_y%" w="%content_width%" h="%input_height%"/>
+				<placement x="%col1_x_left%" y="%row7_y%" w="%content_width%" h="%input_height%"/>
 				<text>%tw_backup_encrypt_display%</text>
 				<data name="tw_backup_password" mask="*" maskvariable="tw_backup_encrypt_display"/>
 				<restrict minlen="1" maxlen="32" allow="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890_"/>
@@ -2209,7 +2205,7 @@
 				</actions>
 			</button>
 
-			<fill color="%text_color%">
+			<fill color="%tab_color%">
 				<placement x="%tab3_col3_x%" y="%row_tab_y%" w="%tab3_width%" h="%tab_indicator_height%"/>
 			</fill>
 
@@ -2302,17 +2298,17 @@
 			<template name="progress_bar"/>
 
 			<text style="text_m_accent">
-				<placement x="%indent%" y="%row19_y%"/>
+				<placement x="%col1_x_left%" y="%row22_y%"/>
 				<text>{@progress=Progress:}</text>
 			</text>
 
 			<text style="text_m">
-				<placement x="%indent%" y="%row20_y%"/>
+				<placement x="%col1_x_left%" y="%row23_y%"/>
 				<text>%tw_file_progress%</text>
 			</text>
 
 			<text style="text_m">
-				<placement x="%indent%" y="%row21_y%"/>
+				<placement x="%col1_x_left%" y="%row23_y%"/>
 				<text>%tw_size_progress%</text>
 			</text>
 
@@ -2377,7 +2373,7 @@
 			<template name="sort_options"/>
 
 			<fileselector>
-				<placement x="%indent%" y="%row3_y%" w="%content_width%" h="%fileselector_install_height%"/>
+				<placement x="%col1_x_left%" y="%row3_y%" w="%content_width%" h="%fileselector_install_height%"/>
 				<text>{@restore_sel_pack_fs=Select Package to Restore:}</text>
 				<filter folders="1" files="1" nav="0" extn=".ab"/>
 				<path name="tw_backups_folder"/>
@@ -2729,12 +2725,12 @@
 			<template name="progress_bar"/>
 
 			<text style="text_m_accent">
-				<placement x="%indent%" y="%row19_y%"/>
+				<placement x="%indent%" y="%row22_y%"/>
 				<text>{@progress=Progress:}</text>
 			</text>
 
 			<text style="text_m">
-				<placement x="%indent%" y="%row20_y%"/>
+				<placement x="%indent%" y="%row23_y%"/>
 				<text>%tw_size_progress%</text>
 			</text>
 
@@ -2767,14 +2763,14 @@
 			</text>
 
 			<partitionlist>
-				<placement x="%indent%" y="%row1a_y%" w="%content_width%" h="%partitionlist_mount_height%"/>
+				<placement x="%col1_x_left%" y="%row1a_y%" w="%content_width%" h="%partitionlist_mount_height%"/>
 				<text>{@mount_sel_part=Select Partitions to Mount:}</text>
 				<listtype name="mount"/>
 			</partitionlist>
 
 			<button style="checkbox">
 				<condition var1="tw_mount_system_ro" op="=" var2="0"/>
-				<placement x="%indent%" y="%row15a_y%" textplacement="6"/>
+				<placement x="%col1_x_left%" y="%row15a_y%" textplacement="6"/>
 				<text>{@mount_sys_ro_chk=Mount system partition read-only}</text>
 				<image resource="checkbox_false"/>
 				<action function="mountsystemtoggle">1</action>
@@ -2782,7 +2778,7 @@
 
 			<button style="checkbox">
 				<condition var1="tw_mount_system_ro" op="!=" var2="0"/>
-				<placement x="%indent%" y="%row15a_y%" textplacement="6"/>
+				<placement x="%col1_x_left%" y="%row15a_y%" textplacement="6"/>
 				<text>{@mount_sys_ro_chk=Mount system partition read-only}</text>
 				<image resource="checkbox_true"/>
 				<actions>
@@ -2929,7 +2925,7 @@
 			<template name="page"/>
 
 			<text style="text_l">
-				<placement x="%center_x_power%" y="%row3_header_y_power%"/>
+				<placement x="%center_x%" y="%row3_header_y_power%"/>
 				<text>{@reboot_hdr=Power}</text>
 			</text>
 
@@ -3219,29 +3215,29 @@
 
 			<text style="text_m_accent">
 				<placement x="%center_x%" y="%row2_y%" placement="5"/>
-				<text>{@reboot_install_app1=Would you like to install the Official TWRP App?}</text>
+				<text>{@reboot_install_app1=Would you like to install the Official EKRP App?}</text>
 			</text>
 
 			<text style="text_m_accent">
 				<placement x="%center_x%" y="%row3_y%" placement="5"/>
-				<text>{@reboot_install_app2=The app can check for new TWRP versions.}</text>
+				<text>{@reboot_install_app2=The app can check for new EKRP versions.}</text>
 			</text>
 
 			<checkbox>
 				<condition var1="tw_mount_system_ro" var2="0"/>
-				<placement x="%indent%" y="%row7_y%"/>
+				<placement x="%col1_x_left%" y="%row7_y%"/>
 				<text>{@reboot_install_app_system=Install as a System App}</text>
 				<data variable="tw_app_install_system"/>
 			</checkbox>
 
 			<button style="main_button_half_height">
-				<placement x="%indent%" y="%row16_y%"/>
+				<placement x="%col1_x_left%" y="%row16_y%"/>
 				<text>{@install_cancel=Do not Install}</text>
 				<action function="page">%tw_back%</action>
 			</button>
 
 			<slider>
-				<text>{@swipe_to_install_app=Swipe to Install TWRP App}</text>
+				<text>{@swipe_to_install_app=Swipe to Install EKRP App}</text>
 				<actions>
 					<action function="set">tw_action=installapp</action>
 					<action function="set">tw_action_text1={@reboot_installing_app=Installing App...}</action>
@@ -3283,7 +3279,7 @@
 
 			<text style="text_m">
 				<placement x="%center_x%" y="%row4_y%" placement="5"/>
-				<text>{@sys_rop1=TWRP can leave your system partition unmodified}</text>
+				<text>{@sys_rop1=EKRP can leave your system partition unmodified}</text>
 			</text>
 
 			<text style="text_m">
@@ -3293,12 +3289,12 @@
 
 			<text style="text_m">
 				<placement x="%center_x%" y="%row6_y%" placement="5"/>
-				<text>{@sys_rop3=TWRP will be unable to prevent the stock ROM from}</text>
+				<text>{@sys_rop3=EKRP will be unable to prevent the stock ROM from}</text>
 			</text>
 
 			<text style="text_m">
 				<placement x="%center_x%" y="%row7_y%" placement="5"/>
-				<text>{@sys_rop4=replacing TWRP and will not offer to root your device.}</text>
+				<text>{@sys_rop4=replacing EKRP and will not offer to root your device.}</text>
 			</text>
 
 			<text style="text_m_fail">
@@ -3348,23 +3344,18 @@
 			<template name="page"/>
 
 			<text style="text_l">
-				<placement x="%col1_x_header%" y="%row3_header_y%"/>
-				<text>{@settings_hdr=Settings}</text>
-			</text>
-
-			<text style="text_m">
-				<placement x="%col1_x_header%" y="%row4_header_y%"/>
-				<text>{@settings_gen_hdr=General Settings}</text>
+				<placement x="%col1_x_header%" y="%row3_header_y_main%"/>
+				<text>{@settings_gen_hdr=Settings | General}</text>
 			</text>
 
 			<template name="tabs_settings"/>
 
-			<fill color="%text_color%">
-				<placement x="0" y="%row_tab_y%" w="%tab5_width%" h="%tab_indicator_height%"/>
+			<fill color="%tab_color%">
+				<placement x="85" y="%row_tab_y%" w="%tab5_width%" h="%tab_indicator_height%"/>
 			</fill>
 
 			<listbox style="scrolllist">
-				<placement x="%indent%" y="%row3a_y%" w="%content_width%" h="%listbox_settings_height%"/>
+				<placement x="%col1_x_left%" y="%row3a_y%" w="%content_width%" h="%listbox_settings_height%"/>
 				<icon selected="checkbox_true" unselected="checkbox_false"/>
 				<listitem name="{@zip_sig_chk=Zip signature verification}">
 					<data variable="tw_signed_zip_verify"/>
@@ -3441,23 +3432,18 @@
 			<template name="page"/>
 
 			<text style="text_l">
-				<placement x="%col1_x_header%" y="%row3_header_y%"/>
-				<text>{@settings_hdr=Settings}</text>
-			</text>
-
-			<text style="text_m">
-				<placement x="%col1_x_header%" y="%row4_header_y%"/>
-				<text>{@time_zone_hdr=Time Zone}</text>
+				<placement x="%col1_x_header%" y="%row3_header_y_main%"/>
+				<text>{@settings_tzone_hdr=Settings | Time Zone}</text>
 			</text>
 
 			<template name="tabs_settings"/>
 
-			<fill color="%text_color%">
+			<fill color="%tab_color%">
 				<placement x="%tab5_col2_x%" y="%row_tab_y%" w="%tab5_width%" h="%tab_indicator_height%"/>
 			</fill>
 
 			<listbox>
-				<placement x="%indent%" y="%row3_y%" w="%content_width%" h="%listbox_timezone_height%"/>
+				<placement x="%col1_x_left%" y="%row3_y%" w="%content_width%" h="%listbox_timezone_height%"/>
 				<text>{@sel_tz_list=Select Time Zone:}</text>
 				<data name="tw_time_zone_guisel"/>
 				<listitem name="{@utcm11=(UTC -11) Samoa, Midway Island}">BST11;BDT</listitem>
@@ -3487,7 +3473,7 @@
 			</listbox>
 
 			<text style="text_m_accent">
-				<placement x="%indent%" y="%row15a_y%"/>
+				<placement x="%col1_x_left%" y="%row15a_y%"/>
 				<text>{@sel_tz_offset=Select Offset (usually 0): %tw_time_zone_guioffset%}</text>
 			</text>
 
@@ -3516,7 +3502,7 @@
 			</button>
 
 			<checkbox>
-				<placement x="%indent%" y="%row18a_y%"/>
+				<placement x="%col1_x_left%" y="%row18a_y%"/>
 				<font resource="font_m" color="%text_color%"/>
 				<text>{@use_dst_chk=Use daylight savings time (DST)}</text>
 				<data variable="tw_time_zone_guidst"/>
@@ -3525,7 +3511,7 @@
 
 			<text color="%text_color%">
 				<font resource="font_m"/>
-				<placement x="%indent%" y="%row20_y%"/>
+				<placement x="%col1_x_left%" y="%row20_y%"/>
 				<text>{@curr_tz=Current Time Zone: %tw_time_zone%}</text>
 			</text>
 
@@ -3553,23 +3539,18 @@
 			<template name="page"/>
 
 			<text style="text_l">
-				<placement x="%col1_x_header%" y="%row3_header_y%"/>
-				<text>{@settings_hdr=Settings}</text>
-			</text>
-
-			<text style="text_m">
-				<placement x="%col1_x_header%" y="%row4_header_y%"/>
-				<text>{@settings_screen_hdr=Screen Settings}</text>
+				<placement x="%col1_x_header%" y="%row3_header_y_main%"/>
+				<text>{@settings_screen_hdr=Settings | Screen}</text>
 			</text>
 
 			<template name="tabs_settings"/>
 
-			<fill color="%text_color%">
+			<fill color="%tab_color%">
 				<placement x="%tab5_col3_x%" y="%row_tab_y%" w="%tab5_width%" h="%tab_indicator_height%"/>
 			</fill>
 
 			<button>
-				<placement x="%indent%" y="%row3a_y%" textplacement="6"/>
+				<placement x="%col1_x_left%" y="%row3a_y%" textplacement="6"/>
 				<font resource="font_m" color="%text_color%"/>
 				<condition var1="tw_screen_timeout_secs" op="=" var2="0"/>
 				<condition var1="tw_no_screen_timeout" op="!=" var2="1"/>
@@ -3579,7 +3560,7 @@
 			</button>
 
 			<button>
-				<placement x="%indent%" y="%row3a_y%" textplacement="6"/>
+				<placement x="%col1_x_left%" y="%row3a_y%" textplacement="6"/>
 				<font resource="font_m" color="%text_color%"/>
 				<condition var1="tw_screen_timeout_secs" op="!=" var2="0"/>
 				<condition var1="tw_no_screen_timeout" op="!=" var2="1"/>
@@ -3624,18 +3605,13 @@
 			<template name="page"/>
 
 			<text style="text_l">
-				<placement x="%col1_x_header%" y="%row3_header_y%"/>
-				<text>{@settings_hdr=Settings}</text>
-			</text>
-
-			<text style="text_m">
-				<placement x="%col1_x_header%" y="%row4_header_y%"/>
-				<text>{@vibration_hdr=Vibration}</text>
+				<placement x="%col1_x_header%" y="%row3_header_y_main%"/>
+				<text>{@settings_vibration_hdr=Settings | Vibration}</text>
 			</text>
 
 			<template name="tabs_settings"/>
 
-			<fill color="%text_color%">
+			<fill color="%tab_color%">
 				<placement x="%tab5_col4_x%" y="%row_tab_y%" w="%tab5_width%" h="%tab_indicator_height%"/>
 			</fill>
 
@@ -3681,23 +3657,18 @@
 			<template name="page"/>
 
 			<text style="text_l">
-				<placement x="%col1_x_header%" y="%row3_header_y%"/>
-				<text>{@settings_hdr=Settings}</text>
-			</text>
-
-			<text style="text_m">
-				<placement x="%col1_x_header%" y="%row4_header_y%"/>
-				<text>{@language_hdr=Language - %tw_language_display%}</text>
+				<placement x="%col1_x_header%" y="%row3_header_y_main%"/>
+				<text>{@settings_lang_hdr=Settings | Language - %tw_language_display%}</text>
 			</text>
 
 			<template name="tabs_settings"/>
 
-			<fill color="%text_color%">
+			<fill color="%tab_color%">
 				<placement x="%tab5_col5_x%" y="%row_tab_y%" w="%tab5_width%" h="%tab_indicator_height%"/>
 			</fill>
 
 			<listbox>
-				<placement x="%indent%" y="%row3_y%" w="%content_width%" h="%listbox_settings_height%"/>
+				<placement x="%col1_x_left%" y="%row3_y%" w="%content_width%" h="%listbox_settings_height%"/>
 				<text>{@select_language=Select Language:}</text>
 				<icon selected="radio_true" unselected="radio_false" />
 				<data name="tw_language" />
@@ -3730,13 +3701,13 @@
 
 			<checkbox>
 				<condition var1="tw_logcat_exists" var2="1"/>
-				<placement x="%indent%" y="%row4_y%"/>
+				<placement x="%col1_x_left%" y="%row4_y%"/>
 				<text>{@include_logcat=Include Logcat}</text>
 				<data variable="tw_include_logcat" value="1"/>
 			</checkbox>
 
 			<checkbox>
-				<placement x="%indent%" y="%row6_y%"/>
+				<placement x="%col1_x_left%" y="%row6_y%"/>
 				<text>{@include_kernel_log=Include Kernel Log}</text>
 				<data variable="tw_include_kernel_log" value="1"/>
 			</checkbox>
@@ -3800,7 +3771,7 @@
 
 			<listbox style="advanced_listbox">
 				<placement x="%indent%" y="%row13a_y%" w="%content_width%" h="%listbox_advanced_height%"/>
-				<listitem name="{@change_twrp_folder_btn=Change EKRP folder}">
+				<listitem name="{@change_twrp_folder_btn=Change TWRP folder}">
 					<condition var1="tw_is_encrypted" var2="0"/>
 					<action function="page">changeTwrpFolder</action>
 				</listitem>
@@ -5632,11 +5603,11 @@
 
 			<text style="text_m">
 				<placement x="%col1_x_header%" y="%row4_header_y%"/>
-				<text>{@change_twrp_folder_btn=Change TWRP folder}</text>
+				<text>{@change_twrp_folder_btn=Change EKRP folder}</text>
 			</text>
 
 			<text style="text_m_accent">
-				<placement x="%indent%" y="%row2_y%"/>
+				<placement x="%col1_x_left%" y="%row2_y%"/>
 				<text>{@name=Name:}</text>
 			</text>
 
@@ -5677,7 +5648,7 @@
 			</text>
 
 			<button style="main_button_half_height">
-				<placement x="%indent%" y="%row10_y%"/>
+				<placement x="col1_x_left" y="%row10_y%"/>
 				<text>{@cancel_btn=Cancel}</text>
 				<actions>
 					<action function="page">advanced</action>
