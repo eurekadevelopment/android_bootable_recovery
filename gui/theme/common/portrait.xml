@@ -67,6 +67,12 @@
 			<image resource="main_button_half_height"/>
 		</style>
 
+		<style name="storage">
+			<highlight color="%highlight_color%"/>
+			<font resource="font_m" color="%text_button_color%"/>
+			<image resource="storage"/>
+		</style>
+
 		<style name="main_button_half_height_full_width">
 			<highlight color="%highlight_color%"/>
 			<font resource="font_m" color="%text_button_color%"/>
@@ -87,7 +93,7 @@
 
 		<style name="fab">
 			<highlight color="%highlight_color%"/>
-			<placement x="%indent_right%" y="%row21a_y%" placement="1"/>
+			<placement x="%indent_right%" y="%row19a_y%" placement="1"/>
 			<font resource="font_m" color="%button_text_color%"/>
 		</style>
 
@@ -113,7 +119,7 @@
 			<header background="%background_color%" textcolor="%text_color%" separatorcolor="%accent_color%" separatorheight="%fileselector_separatorheight%"/>
 			<separator height="%fileselector_separatorheight%"/>
 			<sort name="tw_gui_sort_order"/>
-			<icon folder="folder" file="file"/>
+			<icon folder="folder" file="file" zip="zip" img="img"/>
 			<background color="%background_color%"/>
 			<font resource="font_m" spacing="%fileselector_spacing%" color="%text_color%" highlightcolor="%highlight_color2%"/>
 		</style>
@@ -209,7 +215,6 @@
 			<text style="text_m">
 				<condition var1="tw_no_cpu_temp" var2="0"/>
 				<placement x="%col1_x_header_ver%" y="%row4_header_y%"/>
-				
 			</text>
 
 			<button style="main_button">
@@ -282,76 +287,43 @@
 
 			<text style="text_l">
 				<condition var1="tw_selectimage" var2="0"/>
-				<placement x="%col1_x_header%" y="%row3_header_y%"/>
-				<text>{@install_zip_hdr=Install Zip}</text>
-			</text>
-
-			<text style="text_l">
-				<condition var1="tw_selectimage" var2="1"/>
-				<placement x="%col1_x_header%" y="%row3_header_y%"/>
-				<text>{@install_image_hdr=Install Image}</text>
+				<placement x="%col1_x_header%" y="%row3_header_y_main%"/>
+				<text>{@install_zip_hdr=Install Zip or a Image}</text>
 			</text>
 
 			<text style="text_m">
-				<placement x="%col1_x_header%" y="%row4_header_y%"/>
+				<placement x="77" y="215"/>
 				<text>{@select_file_from_storage=Select File from %tw_storage_display_name% (%tw_storage_free_size% MB)}</text>
 			</text>
 
 			<template name="sort_options"/>
 
 			<fileselector>
-				<condition var1="tw_selectimage" var2="0"/>
-				<placement x="col1_x_left" y="%row3_y%" w="%content_width%" h="%fileselector_install_height%"/>
+				<placement x="col1_x_left" y="%row1_y%" w="%content_width%" h="%fileselector_install_height%"/>
 				<text>%tw_zip_location%</text>
-				<filter extn=".zip;.ozip;.ZIP;.OZIP;.img" folders="1" files="1"/>
+				<filter extn=".zip;.ozip;.ZIP;.OZIP;.img;.IMG" folders="1" files="1"/>
 				<prfxfilter prfx="Magisk-;Magisk.apk;app-release.apk;app-debug.apk" folders="1" files="1"/>
 				<path name="tw_zip_location" default="/sdcard"/>
 				<data name="tw_filename"/>
 				<selection name="tw_file"/>
 			</fileselector>
 
-			<fileselector>
-				<condition var1="tw_selectimage" var2="1"/>
-				<placement x="col1_x_left" y="%row3_y%" w="%content_width%" h="%fileselector_install_height%"/>
-				<text>%tw_zip_location%</text>
-				<filter extn=".img" folders="1" files="1"/>
-				<path name="tw_zip_location" default="/sdcard"/>
-				<data name="tw_filename"/>
-				<selection name="tw_file"/>
-			</fileselector>
-
-			<button style="main_button_half_height">
-				<placement x="%indent%" y="%row21a_y%"/>
-				<text>{@select_storage_btn=Select Storage}</text>
+			<button style="storage">
+				<placement x="880" y="row3_header_y_storage"/>
 				<actions>
 					<action function="set">tw_back=install</action>
 					<action function="overlay">select_storage</action>
 				</actions>
 			</button>
 
-			<button style="main_button_half_height">
-				<condition var1="tw_selectimage" var2="0"/>
-				<placement x="%center_x%" y="%row21a_y%"/>
-				<text>{@install_image_btn=Install Image}</text>
-				<actions>
-					<action function="set">tw_selectimage=1</action>
-					<action function="page">install</action>
-				</actions>
-			</button>
-
-			<button style="main_button_half_height">
-				<condition var1="tw_selectimage" var2="1"/>
-				<placement x="%center_x%" y="%row21a_y%"/>
-				<text>{@install_zip_btn=Install Zip}</text>
-				<actions>
-					<action function="set">tw_selectimage=0</action>
-					<action function="page">install</action>
-				</actions>
-			</button>
+			<action>
+				<condition var1="tw_filename" op="modified"/>
+				<action function="exten">%tw_file%</action>
+			</action>
 
 			<action>
 				<conditions>
-					<condition var1="tw_selectimage" var2="0"/>
+					<condition var1="ek_file_extn" var2="zip"/>
 					<condition var1="tw_filename" op="modified"/>
 				</conditions>
 				<actions>
@@ -362,13 +334,32 @@
 
 			<action>
 				<conditions>
-					<condition var1="tw_selectimage" var2="1"/>
+					<condition var1="ek_file_extn" var2="apk"/>
 					<condition var1="tw_filename" op="modified"/>
 				</conditions>
 				<actions>
-					<action function="set">tw_is_slot_part=0</action>
-					<action function="page">flashimage_confirm</action>
+					<action function="queuezip"/>
+					<action function="page">flash_confirm</action>
 				</actions>
+			</action>
+
+			<action>
+				<conditions>
+					<condition var1="ek_file_extn" var2="ozip"/>
+					<condition var1="tw_filename" op="modified"/>
+				</conditions>
+				<actions>
+					<action function="queuezip"/>
+					<action function="page">flash_confirm</action>
+				</actions>
+			</action>
+
+			<action>
+				<conditions>
+					<condition var1="ek_file_extn" var2="img"/>
+					<condition var1="tw_filename" op="modified"/>
+				</conditions>
+				<action function="page">flashimage_confirm</action>
 			</action>
 
 			<action>
@@ -1731,10 +1722,8 @@
 				<listtype name="backup"/>
 			</partitionlist>
 
-			<button style="main_button_half_height">
-				<condition var1="tw_enable_adb_backup" op="!=" var2="1"/>
-				<placement x="%indent%" y="%row18a_y%"/>
-				<text>{@select_storage_btn=Select Storage}</text>
+			<button style="storage">
+				<placement x="880" y="row3_header_y_storage"/>
 				<actions>
 					<action function="set">tw_back=backup</action>
 					<action function="overlay">select_storage</action>
@@ -2361,19 +2350,19 @@
 			</action>
 
 			<text style="text_l">
-				<placement x="%col1_x_header%" y="%row3_header_y%"/>
+				<placement x="%col1_x_header%" y="%row3_header_y_main%"/>
 				<text>{@restore_hdr=Restore}</text>
 			</text>
 
 			<text style="text_m">
-				<placement x="%col1_x_header%" y="%row4_header_y%"/>
+				<placement x="77" y="215"/>
 				<text>{@restore_sel_store_hdr=Select Backup from %tw_storage_display_name% (%tw_storage_free_size% MB)}</text>
 			</text>
 
 			<template name="sort_options"/>
 
 			<fileselector>
-				<placement x="%col1_x_left%" y="%row3_y%" w="%content_width%" h="%fileselector_install_height%"/>
+				<placement x="%col1_x_left%" y="%row1_y%" w="%content_width%" h="%fileselector_install_height%"/>
 				<text>{@restore_sel_pack_fs=Select Package to Restore:}</text>
 				<filter folders="1" files="1" nav="0" extn=".ab"/>
 				<path name="tw_backups_folder"/>
@@ -2381,9 +2370,8 @@
 				<selection name="tw_restore_name"/>
 			</fileselector>
 
-			<button style="main_button_half_height">
-				<placement x="%indent%" y="%row21a_y%"/>
-				<text>{@select_storage_btn=Select Storage}</text>
+			<button style="storage">
+				<placement x="880" y="row3_header_y_storage"/>
 				<actions>
 					<action function="set">tw_back=restore</action>
 					<action function="overlay">select_storage</action>
@@ -2808,9 +2796,8 @@
 				<action function="page">decrypt</action>
 			</button>
 
-			<button style="main_button_half_height">
-				<placement x="%indent%" y="%row21a_y%"/>
-				<text>{@select_storage_btn=Select Storage}</text>
+			<button style="storage">
+				<placement x="880" y="row3_header_y_storage"/>
 				<actions>
 					<action function="set">tw_back=mount</action>
 					<action function="overlay">select_storage</action>
@@ -4173,9 +4160,8 @@
 				<selection name="tw_file"/>
 			</fileselector>
 
-			<button style="main_button_half_height">
-				<placement x="%indent%" y="%row21a_y%"/>
-				<text>{@select_storage_btn=Select Storage}</text>
+			<button style="storage">
+				<placement x="880" y="row3_header_y_storage"/>
 				<actions>
 					<action function="set">tw_back=repackselect</action>
 					<action function="overlay">select_storage</action>
@@ -4320,7 +4306,7 @@
 			<template name="sort_options"/>
 
 			<fileselector>
-				<placement x="%indent%" y="%row3_y%" w="%content_width%" h="%fileselector_filemanager_height%"/>
+				<placement x="%col1_x_left%" y="%row1_y%" w="%content_width%" h="%fileselector_filemanager_height%"/>
 				<text>%tw_file_location1%</text>
 				<filter folders="1" files="1"/>
 				<path name="tw_file_location1" default="/"/>

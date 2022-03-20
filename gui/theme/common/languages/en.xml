@@ -61,7 +61,6 @@
 		<string name="files_btn">Files</string>
 		<string name="copy_log_btn">Copy Log</string>
 		<string name="select_type_hdr">Select Type</string>
-		<string name="install_zip_hdr">Install Zip</string>
 		<string name="install_zip_btn">Install Zip</string>
 		<string name="install_image_hdr">Install Image</string>
 		<string name="install_image_btn">Install Image</string>
@@ -781,5 +780,6 @@
 		<string name="settings_screen_hdr">Settings | Screen</string>
 		<string name="settings_vibration_hdr">Settings | Vibration</string>
 		<string name="settings_lang_hdr">Settings | Language</string>
+		<string name="install_zip_hdr">Install Zip or a Image</string>
 	</resources>
 </language>
