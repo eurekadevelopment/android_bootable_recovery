@@ -109,7 +109,7 @@
 
 		<style name="fab">
 			<highlight color="%highlight_color%"/>
-			<placement x="1058" y="%row20a_y%" placement="1"/>
+			<placement x="1015" y="%row20_y%" placement="1"/>
 			<font resource="font_m" color="%button_text_color%"/>
 		</style>
 
@@ -331,7 +331,7 @@
 			</button>
 
 			<button style="sort_button">
-				<placement x="880" y="row22a_y"/>
+				<placement x="885" y="row22a_y"/>
 				<actions>
 					<action function="set">tw_back=install</action>
 					<action function="overlay">sort_menu</action>
@@ -5388,29 +5388,24 @@
 			</fill>
 
 			<image>
-				<placement x="%indent_sort%" y="row16b_y" w="%content_width_sort%" h="%dialog_height_sort%"/>
-				<image resource="sort_bg"/>
-			</image>
-
-			<image>
-				<placement x="%dialog_button_x%" y="%row_name_y%"/>
+				<placement x="885" y="%row_name_y%"/>
 				<image resource="tab_3_name"/>
 			</image>
 
 			<image>
-				<placement x="%dialog_button_x%" y="%row_date_y%"/>
+				<placement x="885" y="%row_date_y%"/>
 				<image resource="tab_3_date"/>
 			</image>
 
 			<image>
-				<placement x="%dialog_button_x%" y="%row_size_y%"/>
+				<placement x="885" y="%row_size_y%"/>
 				<image resource="tab_3_size"/>
 			</image>
 
 			<button>
 				<highlight color="%highlight_color%"/>
 				<condition var1="tw_gui_sort_order" op="=" var2="1"/>
-				<placement x="%dialog_button_x%" y="%row_name_y%"/>
+				<placement x="885" y="%row_name_y%"/>
 				<font resource="font_s" color="%text_button_color%"/>
 				<image resource="sort_asc"/>
 				<action function="set">tw_gui_sort_order=-1</action>
@@ -5419,7 +5414,7 @@
 			<button>
 				<highlight color="%highlight_color%"/>
 				<condition var1="tw_gui_sort_order" op="=" var2="-1"/>
-				<placement x="%dialog_button_x%" y="%row_name_y%"/>
+				<placement x="885" y="%row_name_y%"/>
 				<font resource="font_s" color="%text_button_color%"/>
 				<image resource="sort_desc"/>
 				<action function="set">tw_gui_sort_order=1</action>
@@ -5431,7 +5426,7 @@
 					<condition var1="tw_gui_sort_order" op="!=" var2="1"/>
 					<condition var1="tw_gui_sort_order" op="!=" var2="-1"/>
 				</conditions>
-				<placement x="%dialog_button_x%" y="%row_name_y%"/>
+				<placement x="885" y="%row_name_y%"/>
 				<font resource="font_s" color="%text_button_color%"/>
 				<image resource="sort_empty"/>
 				<action function="set">tw_gui_sort_order=1</action>
@@ -5440,7 +5435,7 @@
 			<button>
 				<highlight color="%highlight_color%"/>
 				<condition var1="tw_gui_sort_order" op="=" var2="2"/>
-				<placement x="%dialog_button_x%" y="%row_date_y%"/>
+				<placement x="885" y="%row_date_y%"/>
 				<font resource="font_s" color="%text_button_color%"/>
 				<image resource="sort_asc"/>
 				<action function="set">tw_gui_sort_order=-2</action>
@@ -5449,7 +5444,7 @@
 			<button>
 				<highlight color="%highlight_color%"/>
 				<condition var1="tw_gui_sort_order" op="=" var2="-2"/>
-				<placement x="%dialog_button_x%" y="%row_date_y%"/>
+				<placement x="885" y="%row_date_y%"/>
 				<font resource="font_s" color="%text_button_color%"/>
 				<image resource="sort_desc"/>
 				<action function="set">tw_gui_sort_order=2</action>
@@ -5461,7 +5456,7 @@
 					<condition var1="tw_gui_sort_order" op="!=" var2="2"/>
 					<condition var1="tw_gui_sort_order" op="!=" var2="-2"/>
 				</conditions>
-				<placement x="%dialog_button_x%" y="%row_date_y%"/>
+				<placement x="885" y="%row_date_y%"/>
 				<font resource="font_s" color="%text_button_color%"/>
 				<image resource="sort_empty"/>
 				<action function="set">tw_gui_sort_order=2</action>
@@ -5470,7 +5465,7 @@
 			<button>
 				<highlight color="%highlight_color%"/>
 				<condition var1="tw_gui_sort_order" op="=" var2="3"/>
-				<placement x="%dialog_button_x%" y="%row_size_y%"/>
+				<placement x="885" y="%row_size_y%"/>
 				<font resource="font_s" color="%text_button_color%"/>
 				<image resource="sort_asc"/>
 				<action function="set">tw_gui_sort_order=-3</action>
@@ -5479,7 +5474,7 @@
 			<button>
 				<highlight color="%highlight_color%"/>
 				<condition var1="tw_gui_sort_order" op="=" var2="-3"/>
-				<placement x="%dialog_button_x%" y="%row_size_y%"/>
+				<placement x="885" y="%row_size_y%"/>
 				<font resource="font_s" color="%text_button_color%"/>
 				<image resource="sort_desc"/>
 				<action function="set">tw_gui_sort_order=3</action>
@@ -5491,14 +5486,14 @@
 					<condition var1="tw_gui_sort_order" op="!=" var2="3"/>
 					<condition var1="tw_gui_sort_order" op="!=" var2="-3"/>
 				</conditions>
-				<placement x="%dialog_button_x%" y="%row_size_y%"/>
+				<placement x="885" y="%row_size_y%"/>
 				<font resource="font_s" color="%text_button_color%"/>
 				<image resource="sort_empty"/>
 				<action function="set">tw_gui_sort_order=3</action>
 			</button>
 
 			<button style="button_third_width_sort">
-				<placement x="%dialog_button_x%" y="%row_ok_y%"/>
+				<placement x="885" y="%row_ok_y%"/>
 				<actions>
 					<action function="set">tw_clear_destination=%tw_back%</action>
 					<action function="overlay"/>

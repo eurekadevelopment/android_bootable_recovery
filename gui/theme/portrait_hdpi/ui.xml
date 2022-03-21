@@ -85,7 +85,6 @@
 		<image name="tab_3_date" filename="tab_3_date" retainaspect="1"/>
 		<image name="tab_3_name" filename="tab_3_name" retainaspect="1"/>
 		<image name="tab_3_ok" filename="tab_3_ok" retainaspect="1"/>
-		<image name="sort_bg" filename="sort_bg" retainaspect="1"/>
 	</resources>
 
 	<variables>
@@ -198,9 +197,9 @@
 		<variable name="row18a_y" value="1376"/>
 		<variable name="row19_y" value="1150"/>
 		<variable name="row19_y_about" value="1450"/>
-		<variable name="row_size_y" value="1440"/>
-		<variable name="row_date_y" value="1360"/>
-		<variable name="row_name_y" value="1280"/>
+		<variable name="row_size_y" value="1400"/>
+		<variable name="row_date_y" value="1280"/>
+		<variable name="row_name_y" value="1160"/>
 		<variable name="row_ok_y" value="1520"/>
 		<variable name="row19a_y" value="1440"/>
 		<variable name="row20_y" value="1472"/>
