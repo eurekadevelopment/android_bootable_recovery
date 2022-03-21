@@ -13,6 +13,10 @@
 			<font resource="font_m" color="%text_color%"/>
 		</style>
 
+		<style name="text_l_fail">
+			<font resource="font_l" color="%text_fail_color%"/>
+		</style>
+
 		<style name="text_m_fail">
 			<font resource="font_m" color="%text_fail_color%"/>
 		</style>
@@ -73,6 +77,12 @@
 			<image resource="storage"/>
 		</style>
 
+		<style name="sort_button">
+			<highlight color="%highlight_color%"/>
+			<font resource="font_m" color="%text_button_color%"/>
+			<image resource="sort"/>
+		</style>
+
 		<style name="main_button_half_height_full_width">
 			<highlight color="%highlight_color%"/>
 			<font resource="font_m" color="%text_button_color%"/>
@@ -85,6 +95,12 @@
 			<image resource="tab_3"/>
 		</style>
 
+		<style name="button_third_width_sort">
+			<highlight color="%highlight_color%"/>
+			<font resource="font_m" color="%text_button_color%"/>
+			<image resource="tab_3_ok"/>
+		</style>
+
 		<style name="button_quarter_width">
 			<highlight color="%highlight_color%"/>
 			<font resource="font_m" color="%text_button_color%"/>
@@ -93,7 +109,7 @@
 
 		<style name="fab">
 			<highlight color="%highlight_color%"/>
-			<placement x="%indent_right%" y="%row19a_y%" placement="1"/>
+			<placement x="1058" y="%row20a_y%" placement="1"/>
 			<font resource="font_m" color="%button_text_color%"/>
 		</style>
 
@@ -287,7 +303,7 @@
 
 			<text style="text_l">
 				<condition var1="tw_selectimage" var2="0"/>
-				<placement x="%col1_x_header%" y="%row3_header_y_main%"/>
+				<placement x="290" y="%row3_header_y_main%"/>
 				<text>{@install_zip_hdr=Install Zip or a Image}</text>
 			</text>
 
@@ -295,8 +311,6 @@
 				<placement x="77" y="215"/>
 				<text>{@select_file_from_storage=Select File from %tw_storage_display_name% (%tw_storage_free_size% MB)}</text>
 			</text>
-
-			<template name="sort_options"/>
 
 			<fileselector>
 				<placement x="col1_x_left" y="%row1_y%" w="%content_width%" h="%fileselector_install_height%"/>
@@ -313,6 +327,14 @@
 				<actions>
 					<action function="set">tw_back=install</action>
 					<action function="overlay">select_storage</action>
+				</actions>
+			</button>
+
+			<button style="sort_button">
+				<placement x="880" y="row22a_y"/>
+				<actions>
+					<action function="set">tw_back=install</action>
+					<action function="overlay">sort_menu</action>
 				</actions>
 			</button>
 
@@ -484,19 +506,19 @@
 			<template name="page"/>
 
 			<text style="text_l">
-				<placement x="%col1_x_header%" y="%row3_header_y%"/>
+				<placement x="375" y="%row3_header_y_main%"/>
 				<text>{@install_zip_count_hdr=Install Zip %tw_zip_index% of %tw_zip_queue_count%}</text>
 			</text>
 
 			<text style="text_m">
-				<placement x="%col1_x_header%" y="%row4_header_y%"/>
+				<placement x="77" y="%row23a_y%"/>
 				<text>%tw_file%</text>
 			</text>
 
 			<template name="console"/>
 
 			<text style="text_m_accent">
-				<placement x="320" y="%row23a_y%"/>
+				<placement x="320" y="%row22a_y%"/>
 				<text>{@state=Updating... please wait!}</text>
 			</text>
 
@@ -511,21 +533,16 @@
 		<page name="flash_done">
 			<template name="page"/>
 
-			<text style="text_l">
-				<placement x="%col1_x_header%" y="%row3_header_y%"/>
-				<text>{@install_zip_hdr=Install Zip}</text>
-			</text>
-
-			<text style="text_m_fail">
+			<text style="text_l_fail">
 				<condition var1="tw_operation_status" op="!=" var2="0"/>
-				<placement x="%col1_x_header%" y="%row4_header_y%"/>
-				<text>{@failed=Failed}</text>
+				<placement x="350" y="%row3_header_y_main%"/>
+				<text>{@failed_install=Install Failed!}</text>
 			</text>
 
-			<text style="text_m">
+			<text style="text_l">
 				<condition var1="tw_operation_status" var2="0"/>
-				<placement x="%col1_x_header%" y="%row4_header_y%"/>
-				<text>{@successful=Successful}</text>
+				<placement x="350" y="%row3_header_y_main%"/>
+				<text>{@successful_install=Install Successful!}</text>
 			</text>
 
 			<template name="console"/>
@@ -1045,13 +1062,8 @@
 			<template name="page"/>
 
 			<text style="text_l">
-				<placement x="%col1_x_header%" y="%row3_header_y%"/>
-				<text>{@wipe_hdr=Wipe}</text>
-			</text>
-
-			<text style="text_m">
-				<placement x="%col1_x_header%" y="%row4_header_y%"/>
-				<text>{@factory_reset_hdr=Factory Reset}</text>
+				<placement x="290" y="%row3_header_y_main%"/>
+				<text>{@factory_reset_hdr=Wipe | Factory Reset}</text>
 			</text>
 
 			<text style="text_m_accent">
@@ -1168,17 +1180,12 @@
 			</action>
 
 			<text style="text_l">
-				<placement x="%col1_x_header%" y="%row3_header_y%"/>
-				<text>{@wipe_hdr=Wipe}</text>
-			</text>
-
-			<text style="text_m">
-				<placement x="%col1_x_header%" y="%row4_header_y%"/>
+				<placement x="340" y="%row3_header_y_main%"/>
 				<text>{@advanced_wipe_hdr=Advanced Wipe}</text>
 			</text>
 
 			<partitionlist>
-				<placement x="%col1_x_left%" y="%row1a_y%" w="%content_width%" h="%partitionlist_wipe_height%"/>
+				<placement x="%col1_x_left%" y="%row1_y%" w="%content_width%" h="%partitionlist_wipe_height%"/>
 				<text>{@sel_part_wipe=Select Partitions to Wipe:}</text>
 				<data name="tw_wipe_list"/>
 				<listtype name="wipe"/>
@@ -1227,13 +1234,8 @@
 			<template name="page"/>
 
 			<text style="text_l">
-				<placement x="%col1_x_header%" y="%row3_header_y%"/>
-				<text>{@wipe_hdr=Wipe}</text>
-			</text>
-
-			<text style="text_m">
-				<placement x="%col1_x_header%" y="%row4_header_y%"/>
-				<text>{@format_data_hdr=Format Data}</text>
+				<placement x="300" y="%row3_header_y_main%"/>
+				<text>{@format_data_hdr=Wipe | Format Data}</text>
 			</text>
 
 			<text style="text_m_fail">
@@ -1646,12 +1648,12 @@
 			</action>
 
 			<text style="text_l">
-				<placement x="%col1_x_header%" y="%row3_header_y%"/>
+				<placement x="450" y="%row3_header_y_main%"/>
 				<text>{@backup_hdr=Backup}</text>
 			</text>
 
 			<text style="text_m">
-				<placement x="%col1_x_header%" y="%row4_header_y%"/>
+				<placement x="77" y="215"/>
 				<text>{@storage_hdr=Storage: %tw_storage_display_name% (%tw_storage_free_size% MB)}</text>
 			</text>
 
@@ -1802,12 +1804,12 @@
 			<template name="page"/>
 
 			<text style="text_l">
-				<placement x="%col1_x_header%" y="%row3_header_y%"/>
+				<placement x="450" y="%row3_header_y_main%"/>
 				<text>{@backup_hdr=Backup}</text>
 			</text>
 
 			<text style="text_m">
-				<placement x="%col1_x_header%" y="%row4_header_y%"/>
+				<placement x="77" y="215"/>
 				<text>{@storage_hdr=Storage: %tw_storage_display_name% (%tw_storage_free_size% MB)}</text>
 			</text>
 
@@ -1929,12 +1931,12 @@
 			<template name="page"/>
 
 			<text style="text_l">
-				<placement x="%col1_x_header%" y="%row3_header_y%"/>
+				<placement x="450" y="%row3_header_y_main%"/>
 				<text>{@backup_hdr=Backup}</text>
 			</text>
 
 			<text style="text_m">
-				<placement x="%col1_x_header%" y="%row4_header_y%"/>
+				<placement x="77" y="215"/>
 				<text>{@storage_hdr=Storage: %tw_storage_display_name% (%tw_storage_free_size% MB)}</text>
 			</text>
 
@@ -2045,12 +2047,12 @@
 			<template name="page"/>
 
 			<text style="text_l">
-				<placement x="%col1_x_header%" y="%row3_header_y%"/>
+				<placement x="450" y="%row3_header_y_main%"/>
 				<text>{@backup_hdr=Backup}</text>
 			</text>
 
 			<text style="text_m">
-				<placement x="%col1_x_header%" y="%row4_header_y%"/>
+				<placement x="77" y="215"/>
 				<text>{@storage_hdr=Storage: %tw_storage_display_name% (%tw_storage_free_size% MB)}</text>
 			</text>
 
@@ -2153,12 +2155,12 @@
 			<template name="page"/>
 
 			<text style="text_l">
-				<placement x="%col1_x_header%" y="%row3_header_y%"/>
+				<placement x="450" y="%row3_header_y_main%"/>
 				<text>{@backup_hdr=Backup}</text>
 			</text>
 
 			<text style="text_m">
-				<placement x="%col1_x_header%" y="%row4_header_y%"/>
+				<placement x="77" y="215"/>
 				<text>{@storage_hdr=Storage: %tw_storage_display_name% (%tw_storage_free_size% MB)}</text>
 			</text>
 
@@ -2350,7 +2352,7 @@
 			</action>
 
 			<text style="text_l">
-				<placement x="%col1_x_header%" y="%row3_header_y_main%"/>
+				<placement x="445" y="%row3_header_y_main%"/>
 				<text>{@restore_hdr=Restore}</text>
 			</text>
 
@@ -2741,24 +2743,24 @@
 			<template name="page"/>
 
 			<text style="text_l">
-				<placement x="%col1_x_header%" y="%row3_header_y%"/>
+				<placement x="460" y="%row3_header_y_main%"/>
 				<text>{@mount_hdr=Mount}</text>
 			</text>
 
 			<text style="text_m">
-				<placement x="%col1_x_header%" y="%row4_header_y%"/>
+				<placement x="77" y="215"/>
 				<text>{@storage_hdr=Storage: %tw_storage_display_name% (%tw_storage_free_size% MB)}</text>
 			</text>
 
 			<partitionlist>
-				<placement x="%col1_x_left%" y="%row1a_y%" w="%content_width%" h="%partitionlist_mount_height%"/>
+				<placement x="%col1_x_left%" y="%row1_y%" w="%content_width%" h="%partitionlist_mount_height%"/>
 				<text>{@mount_sel_part=Select Partitions to Mount:}</text>
 				<listtype name="mount"/>
 			</partitionlist>
 
 			<button style="checkbox">
 				<condition var1="tw_mount_system_ro" op="=" var2="0"/>
-				<placement x="%col1_x_left%" y="%row15a_y%" textplacement="6"/>
+				<placement x="%col1_x_left%" y="%row20a_y%" textplacement="6"/>
 				<text>{@mount_sys_ro_chk=Mount system partition read-only}</text>
 				<image resource="checkbox_false"/>
 				<action function="mountsystemtoggle">1</action>
@@ -2766,7 +2768,7 @@
 
 			<button style="checkbox">
 				<condition var1="tw_mount_system_ro" op="!=" var2="0"/>
-				<placement x="%col1_x_left%" y="%row15a_y%" textplacement="6"/>
+				<placement x="%col1_x_left%" y="%row20a_y%" textplacement="6"/>
 				<text>{@mount_sys_ro_chk=Mount system partition read-only}</text>
 				<image resource="checkbox_true"/>
 				<actions>
@@ -2912,7 +2914,7 @@
 			<template name="page"/>
 
 			<text style="text_l">
-				<placement x="%center_x%" y="%row3_header_y_power%"/>
+				<placement x="460" y="%row3_header_y_power%"/>
 				<text>{@reboot_hdr=Power}</text>
 			</text>
 
@@ -3162,7 +3164,7 @@
 			</image>
       
 			<text style="text_m">
-				<placement x="%center_x%" y="%row10_y%" placement="5"/>
+				<placement x="550" y="%row10_y%" placement="5"/>
 				<text>{@about_ekrp=Eureka Recovery Project}</text>
 			</text>
       
@@ -3331,7 +3333,7 @@
 			<template name="page"/>
 
 			<text style="text_l">
-				<placement x="%col1_x_header%" y="%row3_header_y_main%"/>
+				<placement x="320" y="%row3_header_y_main%"/>
 				<text>{@settings_gen_hdr=Settings | General}</text>
 			</text>
 
@@ -3419,7 +3421,7 @@
 			<template name="page"/>
 
 			<text style="text_l">
-				<placement x="%col1_x_header%" y="%row3_header_y_main%"/>
+				<placement x="320" y="%row3_header_y_main%"/>
 				<text>{@settings_tzone_hdr=Settings | Time Zone}</text>
 			</text>
 
@@ -3526,7 +3528,7 @@
 			<template name="page"/>
 
 			<text style="text_l">
-				<placement x="%col1_x_header%" y="%row3_header_y_main%"/>
+				<placement x="320" y="%row3_header_y_main%"/>
 				<text>{@settings_screen_hdr=Settings | Screen}</text>
 			</text>
 
@@ -3592,7 +3594,7 @@
 			<template name="page"/>
 
 			<text style="text_l">
-				<placement x="%col1_x_header%" y="%row3_header_y_main%"/>
+				<placement x="320" y="%row3_header_y_main%"/>
 				<text>{@settings_vibration_hdr=Settings | Vibration}</text>
 			</text>
 
@@ -3644,7 +3646,7 @@
 			<template name="page"/>
 
 			<text style="text_l">
-				<placement x="%col1_x_header%" y="%row3_header_y_main%"/>
+				<placement x="320" y="%row3_header_y_main%"/>
 				<text>{@settings_lang_hdr=Settings | Language - %tw_language_display%}</text>
 			</text>
 
@@ -3727,7 +3729,7 @@
 			<template name="page"/>
 
 			<text style="text_l">
-				<placement x="%col1_x_header%" y="%row3_header_y_main%"/>
+				<placement x="420" y="%row3_header_y_main%"/>
 				<text>{@advanced_hdr=Advanced}</text>
 			</text>
 
@@ -4303,8 +4305,6 @@
 				<text>{@fm_sel_file=Select a File or Folder}</text>
 			</text>
 
-			<template name="sort_options"/>
-
 			<fileselector>
 				<placement x="%col1_x_left%" y="%row1_y%" w="%content_width%" h="%fileselector_filemanager_height%"/>
 				<text>%tw_file_location1%</text>
@@ -4321,6 +4321,14 @@
 					<action function="set">tw_fm_isfolder=1</action>
 					<action function="set">tw_fm_type={@fm_type_folder=Folder}</action>
 					<action function="page">filemanageroptions</action>
+				</actions>
+			</button>
+
+			<button style="sort_button">
+				<placement x="885" y="row22a_y"/>
+				<actions>
+					<action function="set">tw_back=filemanagerlist</action>
+					<action function="overlay">sort_menu</action>
 				</actions>
 			</button>
 
@@ -5367,6 +5375,188 @@
 				<touch key="power"/>
 				<action function="togglebacklight"/>
 			</action>
+
+			<action>
+				<touch key="power+voldown"/>
+				<action function="screenshot"/>
+			</action>
+		</page>
+
+		<page name="sort_menu">
+			<fill color="%semi_transparent%">
+				<placement x="0" y="0" w="%screen_width%" h="%screen_height%"/>
+			</fill>
+
+			<image>
+				<placement x="%indent_sort%" y="row16b_y" w="%content_width_sort%" h="%dialog_height_sort%"/>
+				<image resource="sort_bg"/>
+			</image>
+
+			<image>
+				<placement x="%dialog_button_x%" y="%row_name_y%"/>
+				<image resource="tab_3_name"/>
+			</image>
+
+			<image>
+				<placement x="%dialog_button_x%" y="%row_date_y%"/>
+				<image resource="tab_3_date"/>
+			</image>
+
+			<image>
+				<placement x="%dialog_button_x%" y="%row_size_y%"/>
+				<image resource="tab_3_size"/>
+			</image>
+
+			<button>
+				<highlight color="%highlight_color%"/>
+				<condition var1="tw_gui_sort_order" op="=" var2="1"/>
+				<placement x="%dialog_button_x%" y="%row_name_y%"/>
+				<font resource="font_s" color="%text_button_color%"/>
+				<image resource="sort_asc"/>
+				<action function="set">tw_gui_sort_order=-1</action>
+			</button>
+
+			<button>
+				<highlight color="%highlight_color%"/>
+				<condition var1="tw_gui_sort_order" op="=" var2="-1"/>
+				<placement x="%dialog_button_x%" y="%row_name_y%"/>
+				<font resource="font_s" color="%text_button_color%"/>
+				<image resource="sort_desc"/>
+				<action function="set">tw_gui_sort_order=1</action>
+			</button>
+
+			<button>
+				<highlight color="%highlight_color%"/>
+				<conditions>
+					<condition var1="tw_gui_sort_order" op="!=" var2="1"/>
+					<condition var1="tw_gui_sort_order" op="!=" var2="-1"/>
+				</conditions>
+				<placement x="%dialog_button_x%" y="%row_name_y%"/>
+				<font resource="font_s" color="%text_button_color%"/>
+				<image resource="sort_empty"/>
+				<action function="set">tw_gui_sort_order=1</action>
+			</button>
+
+			<button>
+				<highlight color="%highlight_color%"/>
+				<condition var1="tw_gui_sort_order" op="=" var2="2"/>
+				<placement x="%dialog_button_x%" y="%row_date_y%"/>
+				<font resource="font_s" color="%text_button_color%"/>
+				<image resource="sort_asc"/>
+				<action function="set">tw_gui_sort_order=-2</action>
+			</button>
+
+			<button>
+				<highlight color="%highlight_color%"/>
+				<condition var1="tw_gui_sort_order" op="=" var2="-2"/>
+				<placement x="%dialog_button_x%" y="%row_date_y%"/>
+				<font resource="font_s" color="%text_button_color%"/>
+				<image resource="sort_desc"/>
+				<action function="set">tw_gui_sort_order=2</action>
+			</button>
+
+			<button>
+				<highlight color="%highlight_color%"/>
+				<conditions>
+					<condition var1="tw_gui_sort_order" op="!=" var2="2"/>
+					<condition var1="tw_gui_sort_order" op="!=" var2="-2"/>
+				</conditions>
+				<placement x="%dialog_button_x%" y="%row_date_y%"/>
+				<font resource="font_s" color="%text_button_color%"/>
+				<image resource="sort_empty"/>
+				<action function="set">tw_gui_sort_order=2</action>
+			</button>
+
+			<button>
+				<highlight color="%highlight_color%"/>
+				<condition var1="tw_gui_sort_order" op="=" var2="3"/>
+				<placement x="%dialog_button_x%" y="%row_size_y%"/>
+				<font resource="font_s" color="%text_button_color%"/>
+				<image resource="sort_asc"/>
+				<action function="set">tw_gui_sort_order=-3</action>
+			</button>
+
+			<button>
+				<highlight color="%highlight_color%"/>
+				<condition var1="tw_gui_sort_order" op="=" var2="-3"/>
+				<placement x="%dialog_button_x%" y="%row_size_y%"/>
+				<font resource="font_s" color="%text_button_color%"/>
+				<image resource="sort_desc"/>
+				<action function="set">tw_gui_sort_order=3</action>
+			</button>
+
+			<button>
+				<highlight color="%highlight_color%"/>
+				<conditions>
+					<condition var1="tw_gui_sort_order" op="!=" var2="3"/>
+					<condition var1="tw_gui_sort_order" op="!=" var2="-3"/>
+				</conditions>
+				<placement x="%dialog_button_x%" y="%row_size_y%"/>
+				<font resource="font_s" color="%text_button_color%"/>
+				<image resource="sort_empty"/>
+				<action function="set">tw_gui_sort_order=3</action>
+			</button>
+
+			<button style="button_third_width_sort">
+				<placement x="%dialog_button_x%" y="%row_ok_y%"/>
+				<actions>
+					<action function="set">tw_clear_destination=%tw_back%</action>
+					<action function="overlay"/>
+					<action function="page">clear_vars</action>
+				</actions>
+			</button>
+
+			<fill color="#000000">
+				<placement x="0" y="row25_y" w="%screen_width%" h="%navbar_height"/>
+			</fill>
+
+			<button>
+				<condition var1="tw_samsung_navbar" op="!=" var2="1"/>
+				<placement x="%back_button_x%" y="%navbar_btn_y%" placement="4"/>
+				<image resource="back"/>
+				<condition var1="tw_busy" var2="0"/>
+				<actions>
+					<action function="overlay"/>
+					<action function="key">%tw_back%</action>
+				</actions>
+			</button>
+
+			<button>
+				<condition var1="tw_samsung_navbar" op="=" var2="1"/>
+				<placement x="%back_button_x%" y="%navbar_btn_y%" placement="4"/>
+				<image resource="console"/>
+				<condition var1="tw_busy" var2="0"/>
+				<action function="overlay">slideout</action>
+			</button>
+
+			<button>
+				<placement x="%center_x%" y="%navbar_btn_y%" placement="4"/>
+				<image resource="home"/>
+				<condition var1="tw_busy" var2="0"/>
+				<actions>
+					<action function="overlay"/>
+					<action function="key">home</action>
+				</actions>
+			</button>
+
+			<button>
+				<condition var1="tw_samsung_navbar" op="!=" var2="1"/>
+				<placement x="%console_button_x%" y="%navbar_btn_y%" placement="4"/>
+				<image resource="console"/>
+				<condition var1="tw_busy" var2="0"/>
+				<action function="overlay">slideout</action>
+			</button>
+
+			<button>
+				<condition var1="tw_samsung_navbar" op="=" var2="1"/>
+				<placement x="%console_button_x%" y="%navbar_btn_y%" placement="4"/>
+				<image resource="back"/>
+				<condition var1="tw_busy" var2="0"/>
+				<actions>
+					<action function="overlay"/>
+					<action function="key">%tw_back%</action>
+				</actions>
+			</button>
 
 			<action>
 				<touch key="power+voldown"/>

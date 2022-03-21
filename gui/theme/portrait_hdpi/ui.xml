@@ -80,6 +80,12 @@
 		<image name="eksplash" filename="eksplash" retainaspect="1"/>
     	<image name="eklogo" filename="eklogo" retainaspect="1"/>
 		<image name="storage" filename="storage" retainaspect="1"/>
+		<image name="sort" filename="sort" retainaspect="1"/>
+		<image name="tab_3_size" filename="tab_3_size" retainaspect="1"/>
+		<image name="tab_3_date" filename="tab_3_date" retainaspect="1"/>
+		<image name="tab_3_name" filename="tab_3_name" retainaspect="1"/>
+		<image name="tab_3_ok" filename="tab_3_ok" retainaspect="1"/>
+		<image name="sort_bg" filename="sort_bg" retainaspect="1"/>
 	</resources>
 
 	<variables>
@@ -92,11 +98,14 @@
 		<variable name="header_height" value="256"/>
 		<variable name="navbar_height" value="130"/>
 		<variable name="content_width" value="1008"/>
+		<variable name="content_width_sort" value="320"/>
 		<variable name="content_overlay_width" value="936"/>
 		<variable name="dialog_height" value="704"/>
+		<variable name="dialog_height_sort" value="250"/>
 		<variable name="back_button_x" value="240"/>
 		<variable name="console_button_x" value="840"/>
 		<variable name="indent" value="42"/>
+		<variable name="indent_sort" value="807"/>
 		<variable name="indent_cpu" value="62"/>
 		<variable name="col1_x_left" value="72"/>
 		<variable name="col1_x_header" value="190"/>
@@ -180,6 +189,7 @@
 		<variable name="row14a_y" value="1120"/>
 		<variable name="row15_y" value="1152"/>
 		<variable name="row15a_y" value="1184"/>
+		<variable name="row16b_y" value="1282"/>
 		<variable name="row16_y" value="1216"/>
 		<variable name="row16a_y" value="1248"/>
 		<variable name="row17_y" value="1280"/>
@@ -188,9 +198,13 @@
 		<variable name="row18a_y" value="1376"/>
 		<variable name="row19_y" value="1150"/>
 		<variable name="row19_y_about" value="1450"/>
+		<variable name="row_size_y" value="1440"/>
+		<variable name="row_date_y" value="1360"/>
+		<variable name="row_name_y" value="1280"/>
+		<variable name="row_ok_y" value="1520"/>
 		<variable name="row19a_y" value="1440"/>
 		<variable name="row20_y" value="1472"/>
-		<variable name="row20a_y" value="1504"/>
+		<variable name="row20a_y" value="1500"/>
 		<variable name="row21_y" value="1536"/>
 		<variable name="row21a_y" value="1568"/>
 		<variable name="row22_y" value="1600"/>
@@ -224,13 +238,13 @@
 		<variable name="fileselector_highlight_color" value="#00000000"/>
 		<variable name="fileselector_separatorheight" value="2"/>
 		<variable name="fileselector_spacing" value="0"/>
-		<variable name="fileselector_install_height" value="1376"/>
-		<variable name="fileselector_filemanager_height" value="1376"/>
+		<variable name="fileselector_install_height" value="1500"/>
+		<variable name="fileselector_filemanager_height" value="1500"/>
 		<variable name="partitionlist_spacing" value="0"/>
 		<variable name="partitionlist_storage_height" value="544"/>
 		<variable name="partitionlist_flashimage_height" value="544"/>
-		<variable name="partitionlist_wipe_height" value="1088"/>
-		<variable name="partitionlist_mount_height" value="832"/>
+		<variable name="partitionlist_wipe_height" value="1200"/>
+		<variable name="partitionlist_mount_height" value="1376"/>
 		<variable name="partitionlist_backup_height" value="768"/>
 		<variable name="listbox_timezone_height" value="756"/>
 		<variable name="listbox_settings_height" value="960"/>
@@ -249,9 +263,9 @@
 		<variable name="slideout_bg_height" value="1720"/>
 		<variable name="input_height" value="64"/>
 		<variable name="input_line_width" value="3"/>
-		<variable name="console_height" value="1200"/>
+		<variable name="console_height" value="1250"/>
 		<variable name="console_terminal_height" value="950"/>
-		<variable name="dialog_button_x" value="696"/>
+		<variable name="dialog_button_x" value="750"/>
 		<variable name="pattern_x" value="126"/>
 		<variable name="pattern_dot_dia" value="32"/>
 		<variable name="pattern_line_w" value="12"/>
