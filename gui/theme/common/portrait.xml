@@ -2361,8 +2361,6 @@
 				<text>{@restore_sel_store_hdr=Select Backup from %tw_storage_display_name% (%tw_storage_free_size% MB)}</text>
 			</text>
 
-			<template name="sort_options"/>
-
 			<fileselector>
 				<placement x="%col1_x_left%" y="%row1_y%" w="%content_width%" h="%fileselector_install_height%"/>
 				<text>{@restore_sel_pack_fs=Select Package to Restore:}</text>
@@ -2377,6 +2375,14 @@
 				<actions>
 					<action function="set">tw_back=restore</action>
 					<action function="overlay">select_storage</action>
+				</actions>
+			</button>
+
+			<button style="sort_button">
+				<placement x="885" y="row22a_y"/>
+				<actions>
+					<action function="set">tw_back=restore</action>
+					<action function="overlay">sort_menu</action>
 				</actions>
 			</button>
 
@@ -4151,8 +4157,6 @@
 				<text>{@select_file_from_storage=Select File from %tw_storage_display_name% (%tw_storage_free_size% MB)}</text>
 			</text>
 
-			<template name="sort_options"/>
-
 			<fileselector>
 				<placement x="%indent%" y="%row3_y%" w="%content_width%" h="%fileselector_install_height%"/>
 				<text>%tw_zip_location%</text>
@@ -4167,6 +4171,14 @@
 				<actions>
 					<action function="set">tw_back=repackselect</action>
 					<action function="overlay">select_storage</action>
+				</actions>
+			</button>
+
+			<button style="sort_button">
+				<placement x="885" y="row22a_y"/>
+				<actions>
+					<action function="set">tw_back=repackselect</action>
+					<action function="overlay">sort_menu</action>
 				</actions>
 			</button>
 
@@ -4519,8 +4531,6 @@
 				<text>{@fm_sel_dest=Select Destination Folder}</text>
 			</text>
 
-			<template name="sort_options"/>
-
 			<fileselector>
 				<placement x="%indent%" y="%row3_y%" w="%content_width%" h="%fileselector_filemanager_height%"/>
 				<text>%tw_file_location2%</text>
@@ -4538,6 +4548,14 @@
 					<action function="set">tw_include_text3=1</action>
 					<action function="set">tw_back=filemanageroptions</action>
 					<action function="page">filemanagerconfirm</action>
+				</actions>
+			</button>
+
+			<button style="sort_button">
+				<placement x="885" y="row22a_y"/>
+				<actions>
+					<action function="set">tw_back=choosedestinationfolder</action>
+					<action function="overlay">sort_menu</action>
 				</actions>
 			</button>
 
@@ -5574,9 +5592,8 @@
 				<listtype name="storage"/>
 			</partitionlist>
 
-			<button style="button_third_width">
+			<button style="button_third_width_sort">
 				<placement x="%dialog_button_x%" y="%row14_y%"/>
-				<text>{@ok_btn=OK}</text>
 				<actions>
 					<action function="set">tw_clear_destination=%tw_back%</action>
 					<action function="overlay"/>
