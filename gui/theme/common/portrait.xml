@@ -77,6 +77,12 @@
 			<image resource="storage"/>
 		</style>
 
+		<style name="torch_button">
+			<highlight color="%highlight_color%"/>
+			<font resource="font_m" color="%text_button_color%"/>
+			<image resource="torch"/>
+		</style>
+		
 		<style name="sort_button">
 			<highlight color="%highlight_color%"/>
 			<font resource="font_m" color="%text_button_color%"/>
@@ -3138,12 +3144,6 @@
 				</actions>
 			</button>		
 
-			<button style="main_button">
-				<placement x="%center_x%" y="%row8_y%"/>
-				<text>{@flash_btn=Flashlight}</text>
-				<action function="flashlight" />
-			</button>
-
 			<action>
 				<touch key="home"/>
 				<action function="page">main</action>
@@ -5374,6 +5374,14 @@
 				<fill color="%transparent%"/>
 				<placement x="0" y="%navbar_y%" w="%screen_width%" h="%navbar_height%"/>
 				<action function="overlay"/>
+			</button>
+			
+			<button style="torch_button">
+				<placement x="885" y="row20a_y"/>
+				<actions>
+					<action function="set">tw_back=slideout</action>
+					<action function="flashlight" />
+				</actions>
 			</button>
 			
 			<slidervalue>

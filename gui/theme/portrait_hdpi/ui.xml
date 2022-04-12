@@ -84,6 +84,7 @@
 		<image name="tab_3_date" filename="tab_3_date" retainaspect="1"/>
 		<image name="tab_3_name" filename="tab_3_name" retainaspect="1"/>
 		<image name="tab_3_ok" filename="tab_3_ok" retainaspect="1"/>
+		<image name="torch" filename="torch" retainaspect="1"/>
 	</resources>
 
 	<variables>
