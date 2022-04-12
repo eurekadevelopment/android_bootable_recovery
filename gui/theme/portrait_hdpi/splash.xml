@@ -2,16 +2,15 @@
 <recovery>
 	<details>
 		<resolution width="1080" height="1920"/>
-		<author>Eureka</author>
-		<title>EK</title>
+		<author>Eureka-Development</author>
+		<title>EKRP</title>
 		<description>splash screen</description>
 		<themeversion>{themeversion}</themeversion>
 	</details>
 
 	<resources>
 		<font name="font_l" filename="SamsungSharpSans-Bold.ttf" size="52"/>
-		<image name="eklogo" filename="eklogo" retainaspect="1"/>
-		<image name="eksplash" filename="eksplash" retainaspect="1"/>
+		<image name="s1" filename="s1" retainaspect="1"/>
 	</resources>
 
 	<variables>
@@ -19,7 +18,6 @@
 		<variable name="screen_height" value="1920"/>
 		<variable name="background_color" value="#000000"/>
 		<variable name="header_color" value="#000000"/>
-		<variable name="accent_color" value="#08f"/>
 	</variables>
 
 	<pages>
@@ -31,20 +29,9 @@
 			</fill>
 
 			<image>
-				<image resource="eklogo"/>
-				<placement x="540" y="456" placement="4"/>
+				<image resource="s1"/>
 			</image>
-
-			<image>
-				<image resource="eksplash"/>
-				<placement x="540" y="1540" placement="4"/>
-			</image>
-
-			<text color="%header_color%">
-				<font resource="font_l"/>
-				<placement x="540" y="1590" placement="5"/>
-				<text>Eureka Recovery Project %tw_version%</text>
-			</text>
+			
 		</page>
 	</pages>
 </recovery>

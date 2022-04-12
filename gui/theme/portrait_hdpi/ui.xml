@@ -77,7 +77,6 @@
 		<image name="kb_arrow_right" filename="kb_arrow_right" retainaspect="1"/>
 		<image name="kb_arrow_up" filename="kb_arrow_up" retainaspect="1"/>
 		<image name="kb_arrow_down" filename="kb_arrow_down" retainaspect="1"/>
-		<image name="eksplash" filename="eksplash" retainaspect="1"/>
     	<image name="eklogo" filename="eklogo" retainaspect="1"/>
 		<image name="storage" filename="storage" retainaspect="1"/>
 		<image name="sort" filename="sort" retainaspect="1"/>
